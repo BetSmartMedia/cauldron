@@ -1,0 +1,85 @@
+$list-heading-border: #b2b2b2 !default;
+$list-row-border: #dbdbdb !default;
+$list-padding: 10px 20px !default;
+$list-font-size: inherit !default;
+$list-content-tab: 20px;
+
+//------------------------------------------------------------------------------
+// Default styling
+//------------------------------------------------------------------------------
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ol {
+	list-style-position: outside;
+	margin: 0;
+	padding: 0;
+	li:last-child {
+		border-bottom: none;
+	}
+}
+
+//------------------------------------------------------------------------------
+// iOS styled list (top-level headings span across, child content tabs in)
+// iOS list should be structured like so:
+// <ul class="ios-list">
+//   <li>
+//       <h2 class="ios-list-heading">Heading Text<h2> <!-- <h2> can be <ul> -->
+//       <ul class="ios-list-content">
+//         <li>...</li>
+//       </ul>
+//   </li>
+// </ul>
+//------------------------------------------------------------------------------
+.ios-list {
+
+}
+
+.ios-list-heading {
+	border-bottom: 1px solid $list-heading-border;
+	li {
+		padding: $list-padding;
+		@include box-sizing(border-box);
+	}
+}
+h1.ios-list-heading, h2.ios-list-heading {
+	padding: $list-padding;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.ios-list-content {
+	margin-left: $list-content-tab;
+	li {
+		margin: 0;
+		padding: $list-padding;
+		//padding-left: 0;
+		border-bottom: 1px solid $list-row-border;
+		@include box-sizing(border-box);
+
+		&:first-child {
+
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+// Ordered list
+//------------------------------------------------------------------------------
+ol {
+
+}
+
+//------------------------------------------------------------------------------
+// Unordered list
+//------------------------------------------------------------------------------
+ul {
+
+	// modifiers (@todo)
+	&.cirlce { }
+	&.disc   { }
+	&.bullet { }
+}

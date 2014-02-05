@@ -1,0 +1,935 @@
+/**
+ * Cauldron Recommendation:
+ *   DON'T over abstract your variables. Only define variables which you will
+ *   re-use multiple times. For example, instead of defining $sidebar-padding
+ *   just use padding: 20px in your _sidebar.scss partial. It will save you
+ *   a round trip to find $sidebar-padding and tweak it's value, and it
+ *   won't be used anywhere else. Alternatively, use $gutter defined below.
+ */
+/* line 55, ../scss/cauldron/vendor/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 63, ../scss/cauldron/vendor/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 74, ../scss/cauldron/vendor/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 84, ../scss/cauldron/vendor/_normalize.scss */
+[hidden], template {
+  display: none;
+}
+
+/* line 97, ../scss/cauldron/vendor/_normalize.scss */
+html {
+  font-size: 100%;
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 113, ../scss/cauldron/vendor/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/* line 119, ../scss/cauldron/vendor/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* line 132, ../scss/cauldron/vendor/_normalize.scss */
+a {
+  background: transparent;
+}
+/* line 139, ../scss/cauldron/vendor/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 146, ../scss/cauldron/vendor/_normalize.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 159, ../scss/cauldron/vendor/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 164, ../scss/cauldron/vendor/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 169, ../scss/cauldron/vendor/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 174, ../scss/cauldron/vendor/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 179, ../scss/cauldron/vendor/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 184, ../scss/cauldron/vendor/_normalize.scss */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/* line 192, ../scss/cauldron/vendor/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 199, ../scss/cauldron/vendor/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 204, ../scss/cauldron/vendor/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 211, ../scss/cauldron/vendor/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 217, ../scss/cauldron/vendor/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 225, ../scss/cauldron/vendor/_normalize.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/* line 236, ../scss/cauldron/vendor/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/* line 246, ../scss/cauldron/vendor/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 254, ../scss/cauldron/vendor/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 263, ../scss/cauldron/vendor/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/* line 270, ../scss/cauldron/vendor/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 277, ../scss/cauldron/vendor/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 285, ../scss/cauldron/vendor/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 292, ../scss/cauldron/vendor/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 296, ../scss/cauldron/vendor/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 309, ../scss/cauldron/vendor/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 315, ../scss/cauldron/vendor/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 324, ../scss/cauldron/vendor/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/* line 333, ../scss/cauldron/vendor/_normalize.scss */
+nav ul,
+nav ol {
+  list-style-image: none;
+}
+
+/* line 348, ../scss/cauldron/vendor/_normalize.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 357, ../scss/cauldron/vendor/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 367, ../scss/cauldron/vendor/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* line 377, ../scss/cauldron/vendor/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/* line 384, ../scss/cauldron/vendor/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 395, ../scss/cauldron/vendor/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+/* line 412, ../scss/cauldron/vendor/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/* line 425, ../scss/cauldron/vendor/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 435, ../scss/cauldron/vendor/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 450, ../scss/cauldron/vendor/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+/* line 461, ../scss/cauldron/vendor/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 471, ../scss/cauldron/vendor/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+/* line 483, ../scss/cauldron/vendor/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 494, ../scss/cauldron/vendor/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 502, ../scss/cauldron/vendor/_normalize.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 511, ../scss/cauldron/vendor/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 522, ../scss/cauldron/vendor/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 4, ../scss/cauldron/modules/_alerts.scss */
+.alert {
+  padding: .5em;
+  margin-bottom: 1em;
+  line-height: 1;
+  letter-spacing: 0;
+}
+/* line 10, ../scss/cauldron/modules/_alerts.scss */
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+/* line 16, ../scss/cauldron/modules/_alerts.scss */
+.alert .alert-link {
+  font-weight: bold;
+}
+/* line 22, ../scss/cauldron/modules/_alerts.scss */
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+/* line 25, ../scss/cauldron/modules/_alerts.scss */
+.alert > p + p {
+  margin-top: 5px;
+}
+
+/* line 30, ../scss/cauldron/modules/_alerts.scss */
+.alert-dismissable {
+  padding-right: 20px;
+}
+/* line 34, ../scss/cauldron/modules/_alerts.scss */
+.alert-dismissable .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+
+/* line 56, ../scss/cauldron/modules/_alerts.scss */
+.alert-danger {
+  background: #fd2600;
+  color: white;
+}
+
+/* line 12, ../scss/cauldron/modules/_buttons.scss */
+.btn, .btn-primary, .btn-secondary, .btn-tertiary {
+  border: none;
+  padding: .35em 1.25em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 19, ../scss/cauldron/modules/_buttons.scss */
+.btn.round, .round.btn-primary, .round.btn-secondary, .round.btn-tertiary {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 20, ../scss/cauldron/modules/_buttons.scss */
+.btn.disabled, .disabled.btn-primary, .disabled.btn-secondary, .disabled.btn-tertiary {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+
+/* line 23, ../scss/cauldron/modules/_buttons.scss */
+.btn-primary {
+  background-color: #fd2600;
+  color: white;
+}
+/* line 27, ../scss/cauldron/modules/_buttons.scss */
+.btn-primary:hover {
+  background-color: #971700;
+}
+/* line 30, ../scss/cauldron/modules/_buttons.scss */
+.btn-primary:active {
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 36, ../scss/cauldron/modules/_buttons.scss */
+.btn-secondary {
+  background: #515151;
+  color: black;
+}
+/* line 40, ../scss/cauldron/modules/_buttons.scss */
+.btn-secondary:hover {
+  background-color: #1e1e1e;
+}
+
+/**
+ * Button modifiers:
+ * Used in conjunction with above btns: class="btn-primary white-btn"
+ */
+/* line 54, ../scss/cauldron/modules/_buttons.scss */
+.white-btn {
+  background-color: white;
+  color: black;
+}
+/* line 58, ../scss/cauldron/modules/_buttons.scss */
+.white-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* line 10, ../scss/cauldron/modules/_lists.scss */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, ../scss/cauldron/modules/_lists.scss */
+ol {
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+}
+/* line 20, ../scss/cauldron/modules/_lists.scss */
+ol li:last-child {
+  border-bottom: none;
+}
+
+/* line 41, ../scss/cauldron/modules/_lists.scss */
+.ios-list-heading {
+  border-bottom: 1px solid #b2b2b2;
+}
+/* line 43, ../scss/cauldron/modules/_lists.scss */
+.ios-list-heading li {
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 48, ../scss/cauldron/modules/_lists.scss */
+h1.ios-list-heading, h2.ios-list-heading {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* line 54, ../scss/cauldron/modules/_lists.scss */
+.ios-list-content {
+  margin-left: 20px;
+}
+/* line 56, ../scss/cauldron/modules/_lists.scss */
+.ios-list-content li {
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../scss/cauldron/modules/_forms.scss */
+.form-row {
+  margin-bottom: 8px;
+}
+/* line 14, ../scss/cauldron/modules/_forms.scss */
+.form-row > label {
+  display: block;
+  padding: 3px 0;
+}
+
+/* line 24, ../scss/cauldron/modules/_forms.scss */
+input, textarea, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 30, ../scss/cauldron/modules/_forms.scss */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 10px #a5cad8;
+  -moz-box-shadow: 0 0 10px #a5cad8;
+  box-shadow: 0 0 10px #a5cad8;
+}
+
+/* line 1, ../scss/cauldron/modules/_modifiers.scss */
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 3, ../scss/cauldron/modules/_modifiers.scss */
+.is-hidden {
+  display: none !important;
+}
+
+/* line 4, ../scss/cauldron/modules/_modifiers.scss */
+.is-invisible {
+  visibility: none !important;
+}
+
+/* line 5, ../scss/cauldron/modules/_modifiers.scss */
+.is-disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  filter: blur(1px);
+}
+
+/* line 7, ../scss/cauldron/modules/_modifiers.scss */
+.block {
+  display: block        !important;
+}
+
+/* line 8, ../scss/cauldron/modules/_modifiers.scss */
+.inline {
+  display: inline       !important;
+}
+
+/* line 9, ../scss/cauldron/modules/_modifiers.scss */
+.inline-block {
+  display: inline-block !important;
+}
+
+/* line 11, ../scss/cauldron/modules/_modifiers.scss */
+.left {
+  float: left  !important;
+}
+
+/* line 12, ../scss/cauldron/modules/_modifiers.scss */
+.right {
+  float: right !important;
+}
+
+/* line 14, ../scss/cauldron/modules/_modifiers.scss */
+.text-left {
+  text-align: left   !important;
+}
+
+/* line 15, ../scss/cauldron/modules/_modifiers.scss */
+.text-center {
+  text-align: center !important;
+}
+
+/* line 16, ../scss/cauldron/modules/_modifiers.scss */
+.text-right {
+  text-align: right  !important;
+}
+
+/* line 18, ../scss/cauldron/modules/_modifiers.scss */
+.mt0 {
+  margin-top: 0   !important;
+}
+
+/* line 19, ../scss/cauldron/modules/_modifiers.scss */
+.mt1 {
+  margin-top: 1em !important;
+}
+
+/* line 20, ../scss/cauldron/modules/_modifiers.scss */
+.mb0 {
+  margin-bottom: 0   !important;
+}
+
+/* line 21, ../scss/cauldron/modules/_modifiers.scss */
+.mb1 {
+  margin-bottom: 1em !important;
+}
+
+/* line 23, ../scss/cauldron/modules/_modifiers.scss */
+.white {
+  color: #fff;
+}
+
+/* line 24, ../scss/cauldron/modules/_modifiers.scss */
+.black {
+  color: #000;
+}
+
+/* line 26, ../scss/cauldron/modules/_modifiers.scss */
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+/* line 27, ../scss/cauldron/modules/_modifiers.scss */
+.opacity-50 {
+  opacity: .5 !important;
+}
+
+/* line 28, ../scss/cauldron/modules/_modifiers.scss */
+.opacity-100 {
+  opacity: 1 !important;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-50 {
+  font-size: 50%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-60 {
+  font-size: 60%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-70 {
+  font-size: 70%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-80 {
+  font-size: 80%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-90 {
+  font-size: 90%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-100 {
+  font-size: 100%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-110 {
+  font-size: 110%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-120 {
+  font-size: 120%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-130 {
+  font-size: 130%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-140 {
+  font-size: 140%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-150 {
+  font-size: 150%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-160 {
+  font-size: 160%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-170 {
+  font-size: 170%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-180 {
+  font-size: 180%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-190 {
+  font-size: 190%;
+}
+
+/* line 32, ../scss/cauldron/modules/_modifiers.scss */
+.font-200 {
+  font-size: 200%;
+}
+
+/* line 10, ../scss/cauldron/modules/_nav.scss */
+.menu-bar {
+  background: rgba(255, 255, 255, 0.95);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20, ../scss/cauldron/modules/_nav.scss */
+.menu-bar-item {
+  float: left;
+  text-align: center;
+  margin: 3px 0 3px 3px;
+  width: calc(14.28% - 3px);
+  display: block;
+  line-height: 54px;
+  text-transform: uppercase;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 31, ../scss/cauldron/modules/_nav.scss */
+.menu-bar-item:hover {
+  background-color: #ccc;
+}
+/* line 35, ../scss/cauldron/modules/_nav.scss */
+.menu-bar-item.is-selected {
+  background-color: #555;
+}
+
+/* line 43, ../scss/cauldron/modules/_nav.scss */
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 4, ../scss/cauldron/modules/_panes.scss */
+.panes {
+  position: relative;
+}
+
+/* line 8, ../scss/cauldron/modules/_panes.scss */
+.pane {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 12, ../scss/cauldron/modules/_panes.scss */
+.pane-menubar {
+  padding: 20px;
+}
+
+/* line 16, ../scss/cauldron/modules/_panes.scss */
+.pane-header {
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+/* line 21, ../scss/cauldron/modules/_panes.scss */
+.pane-content {
+  padding: 20px;
+}
+
+/**
+ * Base where you set your app-wide styles
+ */
+/* line 12, ../scss/app/_base.scss */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+/* line 19, ../scss/app/_base.scss */
+html {
+  background: transparent;
+}
+
+/* line 23, ../scss/app/_base.scss */
+body {
+  background: white;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* line 28, ../scss/app/_base.scss */
+pre {
+  font-size: 11px;
+  font-size: .85rem;
+}
+
+/* line 34, ../scss/app/_base.scss */
+hr {
+  height: 1px;
+  margin: 0px;
+  background-color: #eaeae9;
+  border: none;
+  font-size: 0px;
+  margin: 0 auto;
+}
+
+/* line 43, ../scss/app/_base.scss */
+a {
+  color: #ff0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 49, ../scss/app/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* line 1, ../scss/app/_layout.scss */
+.page-wrap {
+  width: 100%;
+}
+
+/* line 7, ../scss/app/_layout.scss */
+.large-page {
+  width: 1120px;
+  max-width: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 7, ../scss/app/_layout.scss */
+  .large-page {
+    padding: 15px;
+  }
+}
+@media only all and (max-width: 767px) {
+  /* line 7, ../scss/app/_layout.scss */
+  .large-page {
+    padding: 10px !important;
+  }
+}
+
+/* line 23, ../scss/app/_layout.scss */
+.full-page {
+  padding: 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* line 23, ../scss/app/_layout.scss */
+  .full-page {
+    padding: 15px;
+  }
+}
+
+/* line 30, ../scss/app/_layout.scss */
+.page-content {
+  width: 75%;
+  float: right;
+  font-size: 110%;
+  padding: 0 30px;
+  min-height: 350px;
+  border-left: 1px solid 1px solid #ababab;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only all and (max-width: 480px) {
+  /* line 30, ../scss/app/_layout.scss */
+  .page-content {
+    width: 100%;
+    border-left: none;
+    margin-left: 0;
+    padding: 0;
+    margin-top: -30px;
+    font-size: 90%;
+  }
+}
+
+/* line 49, ../scss/app/_layout.scss */
+.narrow {
+  margin: 0 auto;
+  max-width: 600px;
+}
