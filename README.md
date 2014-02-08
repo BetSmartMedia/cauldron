@@ -47,15 +47,12 @@ I've coded Cauldron with a few conventions in mind that I recommend you stick wi
 
 ## Vendor libraries and contributors
 #### SCSS
-* **[retina.sass](http://www.retinajs.com)** A helper mixin for applying high-resolution background images
-* **[normalize](https://github.com/kristerkari/normalize.scss)**
-Normalize.scss is a port of the poular normalize.css which makes things look consistent across all the browser.
+* **[retina.sass](http://www.retinajs.com)** is a helper mixin for applying high-resolution background images
+* **[normalize.scss](https://github.com/kristerkari/normalize.scss)** is a port of the poular normalize.css which makes things look consistent across all the browser.
 
 #### Javascript
-* **[modernizer]**(http://modernizr.com/)
-Modernizr is a javascript library that brings old browsers up to speed.
-* **[fastclick]**(https://github.com/ftlabs/fastclick/)
-Fastclick is a javascript library that removes that soon-to-be removed 300ms default delay in all certain mobile and tablet devices.
+* **[modernizer](http://modernizr.com/)** is a javascript library that brings old browsers up to speed.
+* **[fastclick](https://github.com/ftlabs/fastclick/)** is a javascript library that removes that pesky 300ms default delay in mobile devices.
 
 
 
