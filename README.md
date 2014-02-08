@@ -3,13 +3,13 @@ Cauldron is modular SASS framework and HTML boilerplate.
 
 Cauldron strives to be assumption-free and allow you to easily pick and choose the parts you need.
 
-Cauldron is for you if:
+#### Cauldron is for you if:
 * **You want lightweight.** Cauldron is intended to provide a simple set of styles with the mindset that your projects will evolve. You can (and will) easily build upon and override these styles.
 * **You want a simple bootstrap for your projects.** An HTML shell template, modernizr.js, normalize.css, and a solid file structure.
 * **You want some common helper functions.** The mixins provided are a blend of  responsive, typography, and animations.
 * **You don't want presentational javascript included.** I dislike it when a frameworks components need javascript to accomplished a desired look. It's usually uncessary and adds extra weight to your project.
 
-Cauldron is not for you if:
+#### Cauldron is not for you if:
 * **You need a matured, stylistic framework.** There's plenty of frameworks which have great looking components. Bootstrap and Zurb and primary examples. But with that comes a lot of excess cruft which you might not use and also dictates the design of your project, unless you heavily override these styles.
 * **You need more functionality.** Cauldron doesn't provide a large set of helper functions or mixins. It extends compass, but only provides a minimal set of my most used functions.
 
