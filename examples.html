@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--
+	<![CDATA[
+	▄▄·  ▄▄▄· ▄• ▄▌▄▄▌  ·▄▄▄▄  ▄▄▄         ▐ ▄
+	▐█ ▌▪▐█ ▀█ █▪██▌██•  ██▪ ██ ▀▄ █·▪     •█▌▐█
+	██ ▄▄▄█▀▀█ █▌▐█▌██▪  ▐█· ▐█▌▐▀▀▄  ▄█▀▄ ▐█▐▐▌
+	▐███▌▐█ ▪▐▌▐█▄█▌▐█▌▐▌██. ██ ▐█•█▌▐█▌.▐▌██▐█▌
+	·▀▀▀  ▀  ▀  ▀▀▀ .▀▀▀ ▀▀▀▀▀• .▀  ▀ ▀█▄▀▪▀▀ █▪
+
+	Cauldron Framework
+	https://github.com/jonathancochran
+
+	(c) Bet Smart Media
+	Author:  Jonathan Cochran <jon@betsmartmdia.com>
+	Website: http://www.betsmartmedia.com
+	]]>
+-->
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Cauldron Modules</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="initial-scale=1">
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cookie" type="text/css">
+		<link rel="stylesheet" href="js/lib/google-code-prettify/hemisu-light.css">
+		<link rel="stylesheet" href="css/cauldron/examples.css">
+
+		<script src="js/lib/modernizr-2.7.1.min.js"></script>
+		<script src="js/lib/google-code-prettify/prettify.js"></script>
+		<script src="js/lib/google-code-prettify/lang-css.js"></script>
+
+	</head>
+	<body onload="prettyPrint()">
+
+		<aside class="sidebar">
+			<a href="#top" class="logo"><img src="img/logo.png" /></a>
+			<h3>Modules</h3>
+			<ul class="sidebar-nav">
+				<li><a href="#alerts">Alerts</a></li>
+				<li><a href="#buttons">Buttons</a></li>
+				<li><a href="#forms">Forms</a></li>
+				<li><a href="#lists">Lists</a></li>
+				<li><a href="#modifiers">Modifiers</a></li>
+				<li><a href="#panes">Panes</a></li>
+			</ul>
+		</aside>
+
+
+		<div class="content">
+
+			<!-- INTRO -->
+			<section id="top">
+				<h1 class="title">Cauldron</h1>
+
+				<p>
+					Cauldron is modular SASS framework and HTML boilerplate to
+					bootstrap your web & mobile projects.
+					Cauldron strives to be assumption-free and allows you to
+					easily pick and choose the parts you need. Think of Cauldron
+					as the pot which holds a tasty blend of things you might need.
+				</p>
+
+				<h3>Style it your way</h3>
+				<p>In your projects, you can easily override module styles by:</p>
+				<ol>
+					<li>Assigning module variables in your projects
+						<strong>scss/_config.scss</strong> file:
+<pre class="prettyprint lang-css">
+$btn-primary-bg: #cc0000;
+$btn-primary-colour: white;
+</pre>
+					<span class="footnote">In this example, see
+						<strong>_buttons.scss</strong>
+						for a full list of default variables.</span>
+					</li>
+					<li>Overriding Cauldron selectors in your projects
+						<strong>scss/app/_overrides.scss</strong> file:</li>
+<pre class="prettyprint lang-css">
+.btn {
+	border: 1px solid black;
+	@include box-shadow(0 0 1px rgba(black, .25));
+}
+</pre>
+				</ol>
+				<!--<p>Download, tweet, fork it (top right badge)</p>-->
+			</section>
+
+			<!-- ALERTS -->
+			<section id="alerts">
+				<h2>scss/cauldron/_alerts.scss</h2>
+				<h4>Example</h4>
+				<div class="example">
+					<div class="alert">
+						Welcome to our site.
+					</div>
+
+					<div class="alert alert-success">
+						Form successfully submitted!
+					</div>
+
+					<div class="alert alert-info">
+						Your credit cart expires in 30 days.
+					</div>
+
+					<div class="alert alert-warning">
+						Warning: lock your doors.
+					</div>
+
+					<div class="alert alert-danger">
+						Error: email requried.
+					</div>
+				</div>
+
+<h4>Markup</h4>
+<pre class="prettyprint">
+&lt;div class=&quot;alert&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-success&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-info&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-warning&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;alert alert-danger&quot;&gt;...&lt;/div&gt;
+</pre>
+			</section>
+
+			<!-- BUTTONS -->
+			<section id="buttons">
+				<h2>scss/cauldron/_buttons.scss</h2>
+				<h4>Example</h4>
+				<div class="example">
+					<a class="btn">.btn</a>
+					<a class="btn btn-primary">.primary-btn</a>
+					<a class="btn btn-secondary">.secondary-btn</a>
+					<a class="btn btn-tertiary">.tertiary-btn</a>
+					<a class="btn white-btn">.white-btn</a>
+					<a class="btn black-btn">.black-btn</a>
+					<a class="btn btn-primary disabled">.btn-primary .disabled</a>
+					<a class="btn btn-primary full-width">.btn-primary .full-width</a>
+					<a class="btn white-btn full-width pill">.white-btn .full-width .pill</a>
+				</div>
+
+<h4>Markup</h4>
+<pre class="prettyprint">
+&lt;a class=&quot;btn&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn btn-secondary&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn btn-tertiary&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn white-btn&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn black-btn&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary disabled&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary full-width&quot;&gt;...&lt;/a&gt;
+&lt;a class=&quot;btn white-btn full-width pill&quot;&gt;...&lt;/a&gt;
+</pre>
+			</section>
+
+			<!-- FORMS -->
+			<section id="forms">
+				<h2>scss/cauldron/_forms.scss</h2>
+				<p>Wrap your form labels / inputs in a parent div with the
+					<strong>.form-row</strong> class.<br />
+					@todo: more work on forms
+
+				<h3>Labels Above Inputs</h3>
+				<h4>Example</h4>
+				<div class="example" style="max-width: 600px">
+					<div class="form-row">
+						<label for="email" class="required">Email:</label>
+						<input type="text" name="email" id="email" required />
+					</div>
+
+					<div class="form-row">
+						<label for="country" class="required">Country:</label>
+						<select name="country" id="country">
+							<option>Canada</option>
+							<option>USA</option>
+							<option>Everywhere else</option>
+						</select>
+					</div>
+
+					<div class="form-row">
+						<label>Gender:</label>
+						<div class="radio-group">
+							<input type="radio" name="gender" id="male" value="male" />
+							<label for="male">Male</label>
+
+							<input type="radio" name="gender" id="female" value="female" />
+							<label for="female">Female<label>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<label>Your favourite band:</label>
+						<div class="radio-group">
+							<input type="checkbox" name="band" id="nickelback" value="nickelback" />
+							<label for="nickelback">Nickelback</label>
+
+							<input type="checkbox" name="band" id="wesley_willis" value="wesley_willis" />
+							<label for="wesley_willis">Wesley Willis<label>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<label for="message" class="required">Message:</label>
+						<textarea name="message" id="message"></textarea>
+					</div>
+
+					<div class="form-row">
+						<button class="btn-primary">Submit</button>
+						<button>Forgot Password?</button>
+					</div>
+				</div>
+<h4>Markup</h4>
+<pre class="prettyprint">
+&lt;div class=&quot;form-row&quot;&gt;
+	&lt;label for=&quot;email&quot; class=&quot;required&quot;&gt;Email:&lt;/label&gt;
+	&lt;input type=&quot;text&quot; name=&quot;email&quot; id=&quot;email&quot; required /&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-row&quot;&gt;
+	&lt;label for=&quot;country&quot; class=&quot;required&quot;&gt;Country:&lt;/label&gt;
+	&lt;select name=&quot;country&quot; id=&quot;country&quot;&gt;
+		&lt;option&gt;Canada&lt;/option&gt;
+		&lt;option&gt;USA&lt;/option&gt;
+		&lt;option&gt;Everywhere else&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-row&quot;&gt;
+	&lt;label&gt;Gender:&lt;/label&gt;
+	&lt;div class=&quot;radio-group&quot;&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;male&quot; value=&quot;male&quot; /&gt;
+		&lt;label for=&quot;male&quot;&gt;Male&lt;/label&gt;
+
+		&lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;female&quot; value=&quot;female&quot; /&gt;
+		&lt;label for=&quot;female&quot;&gt;Female&lt;label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-row&quot;&gt;
+	&lt;label&gt;Your favourite band:&lt;/label&gt;
+	&lt;div class=&quot;radio-group&quot;&gt;
+		&lt;input type=&quot;checkbox&quot; name=&quot;band&quot; id=&quot;nickelback&quot; value=&quot;nickelback&quot; /&gt;
+		&lt;label for=&quot;nickelback&quot;&gt;Nickelback&lt;/label&gt;
+
+		&lt;input type=&quot;checkbox&quot; name=&quot;band&quot; id=&quot;wesley_willis&quot; value=&quot;wesley_willis&quot; /&gt;
+		&lt;label for=&quot;wesley_willis&quot;&gt;Wesley Willis&lt;label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-row&quot;&gt;
+	&lt;label for=&quot;message&quot; class=&quot;required&quot;&gt;Message:&lt;/label&gt;
+	&lt;textarea name=&quot;message&quot; id=&quot;message&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-row&quot;&gt;
+	&lt;button class=&quot;btn-primary&quot;&gt;Submit&lt;/button&gt;
+	&lt;button&gt;Forgot Password?&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+			</section>
+
+
+			<!-- LISTS -->
+			<section id="lists">
+				<h2>scss/cauldron/_lists.scss</h2>
+				<h3>Normal Lists</h3>
+				<h4>Example</h4>
+				<div class="example">
+					<ul>
+						<li>Unordered list</li>
+						<li>Item example</li>
+					</ul>
+					<ol>
+						<li>Ordered list</li>
+						<li>Item example</li>
+					</ol>
+				</div>
+
+<h4>Markup</h4>
+<pre class="prettyprint">
+&lt;ul&gt;
+	&lt;li&gt;Unordered list&lt;/li&gt;
+	&lt;li&gt;Item example&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;Ordered list&lt;/li&gt;
+	&lt;li&gt;Item example&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+				<hr />
+
+				<h3>iOS7 Style Lists</h3>
+				<h4>Example</h4>
+				<div class="example">
+					<ul class="ios-list">
+						<li>
+							<h3 class="ios-list-heading">List Heading</h3>
+							<ul class="ios-list-content">
+								<li>List item</li>
+								<li>List item</li>
+								<li>List item</li>
+								<li>List item</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+<h4>Markup</h4>
+<pre class="prettyprint">
+&lt;ul class=&quot;ios-list&quot;&gt;
+	&lt;li&gt;
+		&lt;h3 class=&quot;ios-list-heading&quot;&gt;List Heading&lt;/h3&gt;
+		&lt;ul class=&quot;ios-list-content&quot;&gt;
+			&lt;li&gt;List item&lt;/li&gt;
+			&lt;li&gt;List item&lt;/li&gt;
+			&lt;li&gt;List item&lt;/li&gt;
+			&lt;li&gt;List item&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+			</section>
+
+			<!-- MODIFIERS -->
+			<section id="modifiers">
+				<h2>scss/cauldron/_modifiers.scss</h2>
+				<p>
+					Modifiers are 1 line pieces of code which make a small
+					modification on existing behaviour. See the _modifiers.scss
+					file for a full list of available modifiers.
+				</p>
+				<h4>Example</h4>
+				<div class="example">
+					<div class="opacity-50">
+						50% opacity
+					</div>
+
+					<span class="font-150">Font at 150% size</span>
+				</div>
+
+<h4>Markup</h4>
+<pre class="prettyprint">
+&lt;div class=&quot;opacity-50&quot;&gt;
+	50% opacity
+&lt;/div&gt;
+
+&lt;span class=&quot;font-150&quot;&gt;Font at 150% size&lt;/span&gt;
+</pre>
+			</section>
+
+			<!-- PANES -->
+			<section id="panes">
+				<h2>scss/cauldron/_panes.scss</h2>
+				<p>
+					Panes are simply content blocks. You can optionally include
+					a pane header and pane content child div which provide some
+					padding.
+				<p>
+				<h4>Example</h4>
+				<div class="example">
+					<div class="pane">
+						<div class="pane-header">
+							Pane Header
+						</div>
+						<div class="pane-content">
+							Pane Content
+						</div>
+					</div>
+				</div>
+
+<h4>Markup</h4>
+<pre class="prettyprint">
+&lt;div class=&quot;pane&quot;&gt;
+	&lt;div class=&quot;pane-header&quot;&gt;
+		Pane Header
+	&lt;/div&gt;
+	&lt;div class=&quot;pane-content&quot;&gt;
+		Pane Content
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+			</section>
+
+		</div>
+
+
+
+	</body>
+</html>

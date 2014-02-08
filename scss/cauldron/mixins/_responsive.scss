@@ -1,0 +1,71 @@
+@mixin respond($breakpoint, $media: all) {
+	@media only #{$media} and ($breakpoint) {
+		@content;
+	}
+}
+
+@mixin breakpoint($breakpoint, $media: all) {
+
+	// Generic Terms
+	$small:  480px;
+	$medium: 768px;
+	$large:  1024px;
+	$xlarge: 1280px;
+
+	// Generic terms
+	@if $breakpoint == small {
+		@media only #{$media} and (max-width: $small) {
+			@content;
+		}
+	}
+	@else if $breakpoint == medium {
+		@media only #{$media} and (max-width: $medium - 1) {
+			@content;
+		}
+	}
+	@else if $breakpoint == large {
+		@media only #{$media} and (max-width: $large) {
+			@content;
+		}
+	}
+	@else if $breakpoint == xlarge {
+		@media only #{$media} and (max-width: $xlarge) {
+			@content;
+		}
+	}
+
+	// Devices
+	@else if $breakpoint == desktop {
+		@media only #{$media} and (min-width: $large) {
+			@content;
+		}
+	}
+	@else if $breakpoint == tablets {
+		@media only screen and (min-width: $medium) and (max-width: $large - 1) {
+			@content;
+		}
+	}
+	@else if $breakpoint == phones {
+		@media only #{$media} and (max-width: $medium - 1) {
+			@content;
+		}
+	}
+	@else if $breakpoint == small-phones {
+		@media only #{$media} and (max-width: $small) {
+			@content;
+		}
+	}
+}
+
+@mixin hidden($media) {
+	@include breakpoint($media) {
+		display: none !important;
+	}
+}
+
+// Mixin for visible
+@mixin visible($media) {
+	@include breakpoint($media) {
+		display: inherit !important;
+	}
+}

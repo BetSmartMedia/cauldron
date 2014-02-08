@@ -1,0 +1,52 @@
+.page-wrap {
+	width: 100%;
+	//min-height: 100%;
+}
+
+// 1140px wide
+.large-page {
+	width: $large-width;
+	max-width: 100%;
+	margin: 0 auto;
+	@include box-sizing(border-box);
+
+	@include breakpoint(tablets) {
+		padding: ($gutter/2);
+	}
+
+	@include breakpoint(phones) {
+		padding: 10px !important;
+	}
+}
+
+// 100% wide (of parent)
+.full-page {
+	padding: $gutter;
+	@include breakpoint(tablets) {
+		padding: ($gutter/2);
+	}
+}
+
+.page-content {
+	width: 75%;
+	float: right;
+	font-size: 110%;
+	padding: 0 $gutter;
+	min-height: 350px;
+	border-left: 1px solid $border-colour;
+	@include box-sizing(border-box);
+
+	@include breakpoint(small-phones) {
+		width: 100%;
+		border-left: none;
+		margin-left: 0;
+		padding: 0;
+		margin-top: -30px;
+		font-size: 90%;
+	}
+}
+
+.narrow {
+	margin: 0 auto;
+	max-width: 600px;
+}

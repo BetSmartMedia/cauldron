@@ -1,0 +1,89 @@
+$list-heading-border: none !default;
+$list-row-border: #eaeaea !default;
+$list-padding: 10px 20px 10px 0px !default;
+$list-heading-padding: 4px 20px;
+$list-heading-background: #eaeaea;
+
+$list-font-size: inherit !default;
+$list-content-tab: 20px;
+
+//------------------------------------------------------------------------------
+// Default styling
+//------------------------------------------------------------------------------
+ul, ol {
+	list-style-position: outside;
+	margin: 0 0 0 2em;
+	padding: 0;
+
+	li {
+		margin-bottom: .75em;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+
+//------------------------------------------------------------------------------
+// iOS styled list (top-level headings span across, child content tabs in)
+// iOS list should be structured like so:
+// <ul class="ios-list">
+// 	<li>
+// 		<h2 class="ios-list-heading">Heading Text<h2> <!-- <h2> can be <ul> -->
+// 		<ul class="ios-list-content">
+// 			<li>...</li>
+// 		</ul>
+// 	</li>
+// </ul>
+//------------------------------------------------------------------------------
+.ios-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ios-list-heading {
+	padding: $list-heading-padding;
+	background: $list-heading-background;
+	margin: 0;
+	border-bottom: $list-heading-border;
+	li {
+		padding: $list-padding;
+		@include box-sizing(border-box);
+	}
+}
+
+
+.ios-list-content {
+	list-style: none;
+	margin-left: $list-content-tab;
+	li {
+		margin: 0;
+		padding: $list-padding;
+		//padding-left: 0;
+		border-bottom: 1px solid $list-row-border;
+		@include box-sizing(border-box);
+
+		&:first-child {
+
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+// Ordered list
+//------------------------------------------------------------------------------
+ol {
+
+}
+
+//------------------------------------------------------------------------------
+// Unordered list
+//------------------------------------------------------------------------------
+ul {
+
+	// modifiers (@todo)
+	&.cirlce { }
+	&.disc   { }
+	&.bullet { }
+}

@@ -1,0 +1,149 @@
+/**
+ * The file shows examples of all the Cualdron modules
+ */
+
+@import "bootstrap";
+
+// All modules
+@import "modules/alerts";
+@import "modules/buttons";
+@import "modules/lists";
+@import "modules/forms";
+@import "modules/modifiers";
+@import "modules/nav";
+@import "modules/panes";
+@import "modules/typography";
+
+//------------------------------------------------------------------------------
+// Examples.html styles
+//------------------------------------------------------------------------------
+
+// localized vars:
+$cauldron-border: #ccc;
+
+html, body {
+
+}
+body {
+	background-image: inline-image('texture-2.png');
+	color: #333;
+	font-family: 'Helvetica Neue', sans-serif;
+	line-height: 1.42;
+	overflow-x: hidden;
+}
+h1.title {
+	font-size: 380%;
+	font-family: 'Cookie', cursive;
+	margin: .5em 0 .28em;
+}
+h2, h3 {
+	//font-family: 'Londrina Solid', cursive;
+}
+
+.logo {
+	display: block;
+	width: 130px;
+	margin: 0 auto;
+	img {
+		max-width: 100%;
+	}
+
+	@include breakpoint(medium) {
+		width: 110px;
+	}
+}
+
+.sidebar {
+	//background: white;
+	position: fixed;
+	width: 220px;
+	height: 100%;
+	padding: 20px 40px 0;
+	font-size: 90%;
+	border-right: 1px solid $cauldron-border;
+	@include box-sizing(border-box);
+
+	@include breakpoint(small) {
+		display: none;
+	}
+
+	@include breakpoint(medium) {
+		width: 190px;
+	}
+
+	h3 {
+		padding-bottom: 8px;
+		margin-bottom: 0;
+	}
+
+	a {
+		color: #777;
+		text-decoration: none;
+		font-weight: 500;
+		display: block;
+		line-height: 1.72;
+		&:hover {
+			color: black;
+		}
+	}
+}
+
+.sidebar-nav {
+	margin-left: 0;
+	margin-bottom: 1em;
+	list-style: none;
+	li {
+		margin: 0;
+	}
+}
+
+.content {
+	position: relative;
+	margin-left: 220px;
+
+	@include breakpoint(medium) {
+		margin-left: 190px;
+	}
+	@include breakpoint(small) {
+		margin-left: 0px;
+	}
+
+	> section {
+		padding: 40px 100px;
+		border-bottom: 1px solid $cauldron-border;
+
+		hr {
+			height: 1px;
+			margin: 0px;
+			background-color: $cauldron-border;
+			border: none;
+			font-size: 0px;
+			margin: 40px 0;
+			margin-right: -100px;
+		}
+
+		@include breakpoint(medium) {
+			padding: 40px;
+		}
+	}
+}
+
+h4 {
+	color: #999;
+}
+
+.prettyprint {
+	background: #efefef;
+	border: none;
+	tab-size: 2;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+}
+
+.pane {
+	border: 1px solid #ccc;
+	@include border-radius($border-radius);
+	.pane-header {
+		border-bottom: 1px solid #ccc;
+	}
+}

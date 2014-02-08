@@ -1,0 +1,49 @@
+// Defaults
+$border-radius: 3px !default;
+
+$menubar-bg: #fff !default;
+$menubar-height: 60px !default;
+$menubar-item-cnt: 7 !default; // must match # of menubar links
+
+//------------------------------------------------------------------------------
+// Horizontal navigation
+//------------------------------------------------------------------------------
+.menu-bar {
+	background: $menubar-bg;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: $menubar-height;
+	width: 100%;
+	@include border-radius($border-radius);
+	@include box-sizing(border-box);
+}
+.menu-bar-item {
+	float: left;
+	text-align: center;
+	margin: 3px 0 3px 3px;
+	width: calc(14.28% - 3px); // margin*2
+	display: block;
+	line-height: ($menubar-height - 6px);
+	text-transform: uppercase;
+	@include border-radius($border-radius/2);
+	@include box-sizing(border-box);
+
+	&:hover {
+		background-color: #ccc;
+	}
+
+	&.is-selected {
+		background-color: #555;
+	}
+}
+
+//------------------------------------------------------------------------------
+// Vertical navigation
+//------------------------------------------------------------------------------
+.menu-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	@include border-radius($border-radius);
+}

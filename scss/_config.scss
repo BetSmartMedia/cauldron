@@ -1,0 +1,53 @@
+/**
+ * Cauldron Recommendation:
+ *   DON'T over abstract your variables. Only define variables which you will
+ *   re-use multiple times. For example, instead of defining $sidebar-padding
+ *   just use padding: 20px in your _sidebar.scss partial. It will save you
+ *   a round trip to find $sidebar-padding and tweak it's value, and it
+ *   won't be used anywhere else. Alternatively, use $gutter defined below.
+ */
+
+//------------------------------------------------------------------------------
+// Colours
+//------------------------------------------------------------------------------
+
+$white:         #fff;
+$black:         #000;
+$light-gray:    #eaeae9;
+$gray:          #ababab;
+$med-gray:      #515151;
+$dark-gray:     #262e2d;
+
+
+//------------------------------------------------------------------------------
+// Fonts
+//------------------------------------------------------------------------------
+$font-heading: 'Helvetica Neue', sans-serif;
+$font-body:    'Titillium Web', sans-serif;
+
+//------------------------------------------------------------------------------
+// Layout & dimensions
+//------------------------------------------------------------------------------
+$large-width: 1120px;  // max-width of app for RWD large devices
+$medium-width: 768px;  // max-width of app for RWD medium (tablet) devices
+$small-width: 480px;   // max-width of app for RWD mobile devices
+$content-width: $large-width;
+
+//------------------------------------------------------------------------------
+// Global aesthetic
+//------------------------------------------------------------------------------
+$border-radius: 4px;
+$border-colour: 1px solid $gray;
+$gutter: 30px; // padding from edges to elements
+
+//------------------------------------------------------------------------------
+// App partials
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Cauldron module overrides
+//------------------------------------------------------------------------------
+
+// _nav.scss:
+$menubar-bg: rgba($white, .95);
+$menubar-item-cnt: 7;
