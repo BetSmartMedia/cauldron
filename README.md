@@ -28,30 +28,21 @@ At the core of Cauldron is it's modules. Each module requires 0 dependencies (ot
 
 
 ## Getting started
-1. You need SASS & Compass. Git clone this repo and start coding...
-2. Never touch the files in the **scss/cauldron** folder
-3. Start building your app! You'll want to start at the app.scss file and _config.scss file. You app scss goes in the scss/app/. NEVER touch files in the cauldron folder.
+1. You need SASS & Compass. Git clone this repo...
+2. Start building your app! You'll want to start at the app.scss file and _config.scss file. You app scss goes in the scss/app/. NEVER touch files in the **scss/cauldron** folder.
 
 
 ## Updating Cauldron
-Simply run ./update-cauldron.sh from the command line. This will download the latest copy and replace the contents of **scss/cauldron/** in your project directory. It is recommended that you NEVER touch these files, as the update script will overwrite them.
+Simply run **./update-cauldron.sh** from the command line. This will download the latest copy and replace the contents of **scss/cauldron/** in your project directory. It is recommended that you NEVER touch these files, as the update script will overwrite them.
 
 
 ## Good practice makes good stew.
-I've coded Cauldron with a few conventions in mind that I recommend you stick with for a) to retain consistency across project and framework, and .
+I've coded Cauldron with a few conventions in mind that I recommend you stick with to a) retain consistency across project and framework, and b) save yourself a headache by using good practices.
 
 1. **Follow the naming conventions guide from thesassway.com.** Code to reuse as much as possible (DRY). [Read this article](http://thesassway.com/advanced/modular-css-naming-conventions) and [this](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css).
 2. **Keep it under 80**. Keeping your lines of code under 80 characters makes a huge difference in readability and maintainability.
 3. **Line up the columns**. Line up dem' columns! Don't mix tabs and spaces, get an editor that shows you the difference (my own folly kicked me in the ass). Other devs will hate or love you on this principle alone.
 4. **[Thoughtfully name things](http://thesassway.com/beginner/variable-naming)**
-
-
-## Cauldron's structure
-Cauldron is structured in two ways:
-1. The bootstrap with my prefered file structure.
-2. The Cauldron SASS framework located at scss/cauldron.
-
-It's important to note this distinction because as your project files will change, the Cauldron framework won't (until you run the update-cauldron.sh script). Running this update only files within scss/cauldron.
 
 
 ## Vendor libraries and contributors
