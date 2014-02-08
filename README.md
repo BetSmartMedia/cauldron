@@ -29,11 +29,11 @@ At the core of Cauldron is it's modules. Each module requires 0 dependencies (ot
 
 ## Getting started
 1. You need SASS & Compass. Git clone this repo...
-2. Start building your app! You'll want to start at the app.scss file and _config.scss file. You app scss goes in the scss/app/. NEVER touch files in the **scss/cauldron** folder.
+2. Start building your app! You'll want to start at the **app.scss** file and **_config.scss** file. Your app scss goes in *scss/app/**. It's recommended that you never touch files in the **scss/cauldron** folder as they will be overwritten when you update Cauldron.
 
 
 ## Updating Cauldron
-Simply run **./update-cauldron.sh** from the command line. This will download the latest copy and replace the contents of **scss/cauldron/** in your project directory. It is recommended that you NEVER touch these files, as the update script will overwrite them.
+Simply run **./update-cauldron.sh** from the command line. This will download the latest copy and replace the contents of **scss/cauldron/** in your project directory.
 
 
 ## Good practice makes good stew.
