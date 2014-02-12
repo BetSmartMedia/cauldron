@@ -1,3 +1,7 @@
 .DS_Store
+<<<<<<< HEAD
 .sass-cache
 project-page.sh
+=======
+.sass-cache
+>>>>>>> 8d084540e691ce1b0e5696f74155a2e66c142039
