@@ -1,7 +1,7 @@
 // Defaults
 $border-radius: 3px !default;
 $btn-padding: .5em 1.25em !default;
-$btn-margin: 0 .2em .7em 0 !default;
+$btn-margin: 0 .2em .7em !default;
 
 $btn-primary-bg: #ff6418 !default;
 $btn-primary-colour: white !default;
@@ -23,6 +23,7 @@ $btn-tertiary-colour: #333 !default;
 	white-space: nowrap;
 	display: inline-block;
 	text-align: center;
+	text-decoration: none;
 	@include border-radius($border-radius);
 	@include transition(all .1s ease-in-out);
 
@@ -35,12 +36,18 @@ $btn-tertiary-colour: #333 !default;
 	&.pill { @include border-radius(50em); }
 	&.disabled { @include opacity(.5); cursor: default; }
 	&.full-width, &.block { display: block; }
+
+	&:first-child {
+		margin-left: 0;
+	}
 }
 
 .btn-primary {
 	@extend .btn;
 	background: $btn-primary-bg;
 	color: $btn-primary-colour;
+	margin-left: 0;
+
 	&:hover, &:active {
 		background-color: darken($btn-primary-bg, 20%);
 	}
