@@ -13,7 +13,7 @@ Cauldron strives to be assumption-free and allow you to easily pick and choose t
 * **You need a matured, stylistic framework.** There's plenty of frameworks which have great looking components. Bootstrap and Zurb and primary examples. But with that comes a lot of excess cruft which you might not use and also dictates the design of your project, unless you heavily override these styles.
 * **You need more functionality.** Cauldron doesn't provide a large set of helper functions or mixins. It extends compass, but only provides a minimal set of my most used functions.
 
-**Module examples:** see the examples.html file
+**[View examples](http://betsmartmedia.github.io/cauldron/)**
 
 
 ## Why another goddamn framework?
