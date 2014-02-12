@@ -437,8 +437,13 @@ table {
   -webkit-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
-/* line 34, ../scss/cauldron/modules/_buttons.scss */
+/* line 35, ../scss/cauldron/modules/_buttons.scss */
 .btn.pill, .pill.btn-primary, .pill.btn-secondary, .pill.btn-tertiary, button.pill {
   -webkit-border-radius: 50em;
   -moz-border-radius: 50em;
@@ -446,60 +451,58 @@ table {
   -o-border-radius: 50em;
   border-radius: 50em;
 }
-/* line 35, ../scss/cauldron/modules/_buttons.scss */
+/* line 36, ../scss/cauldron/modules/_buttons.scss */
 .btn.disabled, .disabled.btn-primary, .disabled.btn-secondary, .disabled.btn-tertiary, button.disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   cursor: default;
 }
-/* line 36, ../scss/cauldron/modules/_buttons.scss */
+/* line 37, ../scss/cauldron/modules/_buttons.scss */
 .btn.full-width, .full-width.btn-primary, .full-width.btn-secondary, .full-width.btn-tertiary, .btn.block, .block.btn-primary, .block.btn-secondary, .block.btn-tertiary, button.full-width, button.block {
   display: block;
 }
 
-/* line 39, ../scss/cauldron/modules/_buttons.scss */
+/* line 40, ../scss/cauldron/modules/_buttons.scss */
 .btn-primary {
   background: #ff6418;
   color: white;
 }
-/* line 43, ../scss/cauldron/modules/_buttons.scss */
+/* line 44, ../scss/cauldron/modules/_buttons.scss */
 .btn-primary:hover, .btn-primary:active {
   background-color: #b13a00;
 }
-/* line 46, ../scss/cauldron/modules/_buttons.scss */
+/* line 47, ../scss/cauldron/modules/_buttons.scss */
 .btn-primary:active {
-  color: #cccccc;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 52, ../scss/cauldron/modules/_buttons.scss */
+/* line 53, ../scss/cauldron/modules/_buttons.scss */
 .btn-secondary {
   background: #515151;
   color: white;
 }
-/* line 56, ../scss/cauldron/modules/_buttons.scss */
+/* line 57, ../scss/cauldron/modules/_buttons.scss */
 .btn-secondary:hover, .btn-secondary:active {
   background-color: #1e1e1e;
 }
-/* line 59, ../scss/cauldron/modules/_buttons.scss */
+/* line 60, ../scss/cauldron/modules/_buttons.scss */
 .btn-secondary:active {
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.2);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 65, ../scss/cauldron/modules/_buttons.scss */
+/* line 66, ../scss/cauldron/modules/_buttons.scss */
 .btn-tertiary {
   background: #cccccc;
   color: #333333;
 }
-/* line 69, ../scss/cauldron/modules/_buttons.scss */
+/* line 70, ../scss/cauldron/modules/_buttons.scss */
 .btn-tertiary:hover, .btn-tertiary:active {
   color: #333333;
   background-color: #999999;
 }
-/* line 73, ../scss/cauldron/modules/_buttons.scss */
+/* line 74, ../scss/cauldron/modules/_buttons.scss */
 .btn-tertiary:active {
   color: #666666;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -510,17 +513,17 @@ table {
  * Button modifiers, used in conjunction with above btns:
  *   class="btn white-btn"
  */
-/* line 84, ../scss/cauldron/modules/_buttons.scss */
+/* line 85, ../scss/cauldron/modules/_buttons.scss */
 .white-btn {
   background-color: white;
   color: black;
   border: 1px solid #ccc;
 }
-/* line 89, ../scss/cauldron/modules/_buttons.scss */
+/* line 90, ../scss/cauldron/modules/_buttons.scss */
 .white-btn:hover {
   background: #efefef;
 }
-/* line 93, ../scss/cauldron/modules/_buttons.scss */
+/* line 94, ../scss/cauldron/modules/_buttons.scss */
 .white-btn:active {
   color: #999;
   -webkit-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
@@ -528,16 +531,16 @@ table {
   box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
 }
 
-/* line 99, ../scss/cauldron/modules/_buttons.scss */
+/* line 100, ../scss/cauldron/modules/_buttons.scss */
 .black-btn {
   background-color: black;
   color: white;
 }
-/* line 103, ../scss/cauldron/modules/_buttons.scss */
+/* line 104, ../scss/cauldron/modules/_buttons.scss */
 .black-btn:hover {
   color: #ccc;
 }
-/* line 107, ../scss/cauldron/modules/_buttons.scss */
+/* line 108, ../scss/cauldron/modules/_buttons.scss */
 .black-btn:active {
   color: #999;
 }

@@ -28,6 +28,7 @@ $btn-tertiary-colour: #333 !default;
 
 	&:active {
 		@include box-shadow(inset 0 1px .75em rgba(black, .5));
+		@include border-radius($border-radius);
 	}
 
 	// Modifiers: 1 propert
@@ -44,8 +45,8 @@ $btn-tertiary-colour: #333 !default;
 		background-color: darken($btn-primary-bg, 20%);
 	}
 	&:active {
-		color: darken($btn-primary-colour, 20%);
-		@include opacity(.8);
+		color: rgba($btn-primary-colour, .2);
+		//@include opacity(.8);
 	}
 }
 
@@ -57,7 +58,7 @@ $btn-tertiary-colour: #333 !default;
 		background-color: darken($btn-secondary-bg, 20%);
 	}
 	&:active {
-		color: darken($btn-secondary-colour, 20%);
+		color: rgba($btn-secondary-colour, .2);
 		@include opacity(.8);
 	}
 }
