@@ -407,16 +407,16 @@ table {
   border: none;
 }
 
-/* line 15, ../../scss/cauldron/modules/_buttons.scss */
+/* line 17, ../../scss/cauldron/modules/_buttons.scss */
 .btn, .btn-primary, .btn-secondary, .btn-tertiary, button {
   background: none;
   border: none;
   cursor: pointer;
-  padding: .35em 1.25em;
-  margin-right: .2em;
-  margin-bottom: .7em;
+  padding: 0.5em 1.25em;
+  margin: 0 0.2em 0.7em 0;
   white-space: nowrap;
   display: inline-block;
+  text-align: center;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -427,7 +427,13 @@ table {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 28, ../../scss/cauldron/modules/_buttons.scss */
+/* line 29, ../../scss/cauldron/modules/_buttons.scss */
+.btn:active, .btn-primary:active, .btn-secondary:active, .btn-tertiary:active, button:active {
+  -webkit-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
+}
+/* line 34, ../../scss/cauldron/modules/_buttons.scss */
 .btn.pill, .pill.btn-primary, .pill.btn-secondary, .pill.btn-tertiary, button.pill {
   -webkit-border-radius: 50em;
   -moz-border-radius: 50em;
@@ -435,89 +441,100 @@ table {
   -o-border-radius: 50em;
   border-radius: 50em;
 }
-/* line 29, ../../scss/cauldron/modules/_buttons.scss */
+/* line 35, ../../scss/cauldron/modules/_buttons.scss */
 .btn.disabled, .disabled.btn-primary, .disabled.btn-secondary, .disabled.btn-tertiary, button.disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   cursor: default;
 }
-/* line 30, ../../scss/cauldron/modules/_buttons.scss */
+/* line 36, ../../scss/cauldron/modules/_buttons.scss */
 .btn.full-width, .full-width.btn-primary, .full-width.btn-secondary, .full-width.btn-tertiary, .btn.block, .block.btn-primary, .block.btn-secondary, .block.btn-tertiary, button.full-width, button.block {
   display: block;
 }
 
-/* line 33, ../../scss/cauldron/modules/_buttons.scss */
+/* line 39, ../../scss/cauldron/modules/_buttons.scss */
 .btn-primary {
   background: #ff6418;
   color: white;
 }
-/* line 37, ../../scss/cauldron/modules/_buttons.scss */
-.btn-primary:hover {
+/* line 43, ../../scss/cauldron/modules/_buttons.scss */
+.btn-primary:hover, .btn-primary:active {
   background-color: #b13a00;
 }
-/* line 40, ../../scss/cauldron/modules/_buttons.scss */
+/* line 46, ../../scss/cauldron/modules/_buttons.scss */
 .btn-primary:active {
-  background-color: #180800;
+  color: #cccccc;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 46, ../../scss/cauldron/modules/_buttons.scss */
+/* line 52, ../../scss/cauldron/modules/_buttons.scss */
 .btn-secondary {
   background: #515151;
   color: white;
 }
-/* line 50, ../../scss/cauldron/modules/_buttons.scss */
-.btn-secondary:hover {
+/* line 56, ../../scss/cauldron/modules/_buttons.scss */
+.btn-secondary:hover, .btn-secondary:active {
   background-color: #1e1e1e;
 }
-/* line 53, ../../scss/cauldron/modules/_buttons.scss */
+/* line 59, ../../scss/cauldron/modules/_buttons.scss */
 .btn-secondary:active {
-  background-color: black;
+  color: #cccccc;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 59, ../../scss/cauldron/modules/_buttons.scss */
+/* line 65, ../../scss/cauldron/modules/_buttons.scss */
 .btn-tertiary {
   background: #cccccc;
   color: #333333;
 }
-/* line 63, ../../scss/cauldron/modules/_buttons.scss */
-.btn-tertiary:hover {
+/* line 69, ../../scss/cauldron/modules/_buttons.scss */
+.btn-tertiary:hover, .btn-tertiary:active {
   color: #333333;
   background-color: #999999;
 }
-/* line 67, ../../scss/cauldron/modules/_buttons.scss */
+/* line 73, ../../scss/cauldron/modules/_buttons.scss */
 .btn-tertiary:active {
-  background-color: #4d4d4d;
+  color: #666666;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
 /**
- * Button modifiers:
- * Used in conjunction with above btns: class="btn-primary white-btn"
+ * Button modifiers, used in conjunction with above btns:
+ *   class="btn white-btn"
  */
-/* line 78, ../../scss/cauldron/modules/_buttons.scss */
+/* line 84, ../../scss/cauldron/modules/_buttons.scss */
 .white-btn {
   background-color: white;
   color: black;
   border: 1px solid #ccc;
 }
-/* line 83, ../../scss/cauldron/modules/_buttons.scss */
+/* line 89, ../../scss/cauldron/modules/_buttons.scss */
 .white-btn:hover {
   background: #efefef;
 }
+/* line 93, ../../scss/cauldron/modules/_buttons.scss */
+.white-btn:active {
+  color: #999;
+  -webkit-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
+}
 
-/* line 88, ../../scss/cauldron/modules/_buttons.scss */
+/* line 99, ../../scss/cauldron/modules/_buttons.scss */
 .black-btn {
   background-color: black;
   color: white;
 }
-/* line 92, ../../scss/cauldron/modules/_buttons.scss */
+/* line 103, ../../scss/cauldron/modules/_buttons.scss */
 .black-btn:hover {
   color: #ccc;
+}
+/* line 107, ../../scss/cauldron/modules/_buttons.scss */
+.black-btn:active {
+  color: #999;
 }
 
 /* line 13, ../../scss/cauldron/modules/_lists.scss */
@@ -592,20 +609,7 @@ label {
   font-weight: bold;
 }
 
-/*
-input, textarea, select {
-	padding: $field-padding;
-	border: 1px solid #ccc;
-	@include border-radius($field-border-radius);
-	@include box-shadow(none);
-
-	&:focus {
-		outline: none;
-		@include box-shadow(0 0 10px $field-focus);
-	}
-}
-*/
-/* line 53, ../../scss/cauldron/modules/_forms.scss */
+/* line 39, ../../scss/cauldron/modules/_forms.scss */
 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
 textarea, select {
   webkit-appearance: none;
@@ -634,12 +638,12 @@ textarea, select {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 75, ../../scss/cauldron/modules/_forms.scss */
+/* line 61, ../../scss/cauldron/modules/_forms.scss */
 textarea {
   min-height: 150px;
 }
 
-/* line 83, ../../scss/cauldron/modules/_forms.scss */
+/* line 69, ../../scss/cauldron/modules/_forms.scss */
 input[type="radio"] + label, input[type="checkbox"] + label {
   margin-right: 20px;
   font-weight: normal;
@@ -959,7 +963,16 @@ h1.title {
   }
 }
 
-/* line 56, ../../scss/cauldron/examples.scss */
+/* line 55, ../../scss/cauldron/examples.scss */
+a {
+  color: #f5871f;
+}
+/* line 57, ../../scss/cauldron/examples.scss */
+a:hover, a:active {
+  color: #d76e0a;
+}
+
+/* line 63, ../../scss/cauldron/examples.scss */
 .sidebar {
   position: fixed;
   width: 220px;
@@ -972,23 +985,23 @@ h1.title {
   box-sizing: border-box;
 }
 @media only all and (max-width: 480px) {
-  /* line 56, ../../scss/cauldron/examples.scss */
+  /* line 63, ../../scss/cauldron/examples.scss */
   .sidebar {
     display: none;
   }
 }
 @media only all and (max-width: 767px) {
-  /* line 56, ../../scss/cauldron/examples.scss */
+  /* line 63, ../../scss/cauldron/examples.scss */
   .sidebar {
     width: 190px;
   }
 }
-/* line 74, ../../scss/cauldron/examples.scss */
+/* line 81, ../../scss/cauldron/examples.scss */
 .sidebar h3 {
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 79, ../../scss/cauldron/examples.scss */
+/* line 86, ../../scss/cauldron/examples.scss */
 .sidebar a {
   color: #777;
   text-decoration: none;
@@ -996,45 +1009,45 @@ h1.title {
   display: block;
   line-height: 1.72;
 }
-/* line 85, ../../scss/cauldron/examples.scss */
+/* line 92, ../../scss/cauldron/examples.scss */
 .sidebar a:hover {
   color: black;
 }
 
-/* line 91, ../../scss/cauldron/examples.scss */
+/* line 98, ../../scss/cauldron/examples.scss */
 .sidebar-nav {
   margin-left: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   list-style: none;
 }
-/* line 95, ../../scss/cauldron/examples.scss */
+/* line 102, ../../scss/cauldron/examples.scss */
 .sidebar-nav li {
   margin: 0;
 }
 
-/* line 100, ../../scss/cauldron/examples.scss */
+/* line 107, ../../scss/cauldron/examples.scss */
 .content {
   position: relative;
   margin-left: 220px;
 }
 @media only all and (max-width: 767px) {
-  /* line 100, ../../scss/cauldron/examples.scss */
+  /* line 107, ../../scss/cauldron/examples.scss */
   .content {
     margin-left: 190px;
   }
 }
 @media only all and (max-width: 480px) {
-  /* line 100, ../../scss/cauldron/examples.scss */
+  /* line 107, ../../scss/cauldron/examples.scss */
   .content {
     margin-left: 0px;
   }
 }
-/* line 111, ../../scss/cauldron/examples.scss */
+/* line 118, ../../scss/cauldron/examples.scss */
 .content > section {
   padding: 40px 100px;
   border-bottom: 1px solid #cccccc;
 }
-/* line 115, ../../scss/cauldron/examples.scss */
+/* line 122, ../../scss/cauldron/examples.scss */
 .content > section hr {
   height: 1px;
   margin: 0px;
@@ -1045,18 +1058,46 @@ h1.title {
   margin-right: -100px;
 }
 @media only all and (max-width: 767px) {
-  /* line 111, ../../scss/cauldron/examples.scss */
+  /* line 118, ../../scss/cauldron/examples.scss */
   .content > section {
     padding: 40px;
   }
 }
 
-/* line 131, ../../scss/cauldron/examples.scss */
+/* line 138, ../../scss/cauldron/examples.scss */
+.section-title {
+  margin: 0;
+  padding: 20px 100px;
+  background: rgba(204, 204, 204, 0.25);
+  margin-top: -1px;
+  border-bottom: 1px solid #cccccc;
+}
+@media only all and (max-width: 767px) {
+  /* line 138, ../../scss/cauldron/examples.scss */
+  .section-title {
+    padding: 20px 40px;
+  }
+}
+
+/* line 155, ../../scss/cauldron/examples.scss */
 h4 {
   color: #999;
 }
 
-/* line 135, ../../scss/cauldron/examples.scss */
+/* line 159, ../../scss/cauldron/examples.scss */
+.view-source {
+  font-size: 60%;
+  float: right;
+  text-decoration: none;
+  color: #999;
+  font-weight: 400;
+}
+/* line 165, ../../scss/cauldron/examples.scss */
+.view-source:hover {
+  color: #555;
+}
+
+/* line 170, ../../scss/cauldron/examples.scss */
 .prettyprint {
   background: #efefef;
   border: none;
@@ -1064,8 +1105,22 @@ h4 {
   -moz-tab-size: 2;
   -o-tab-size: 2;
 }
+/* line 177, ../../scss/cauldron/examples.scss */
+.prettyprint.large {
+  font-size: 100%;
+}
+/* line 181, ../../scss/cauldron/examples.scss */
+.prettyprint.no-bg {
+  background: none;
+  padding: 0;
+}
 
-/* line 143, ../../scss/cauldron/examples.scss */
+/* line 187, ../../scss/cauldron/examples.scss */
+.tab-in {
+  margin-left: 3rem;
+}
+
+/* line 191, ../../scss/cauldron/examples.scss */
 .pane {
   border: 1px solid #ccc;
   -webkit-border-radius: 3px;
@@ -1074,7 +1129,7 @@ h4 {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 146, ../../scss/cauldron/examples.scss */
+/* line 194, ../../scss/cauldron/examples.scss */
 .pane .pane-header {
   border-bottom: 1px solid #ccc;
 }

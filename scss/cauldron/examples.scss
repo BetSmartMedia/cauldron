@@ -52,6 +52,13 @@ h2, h3 {
 		width: 110px;
 	}
 }
+a {
+	color: #f5871f;
+	&:hover, &:active {
+		color: darken(#f5871f, 10%);
+	}
+}
+
 
 .sidebar {
 	//background: white;
@@ -90,7 +97,7 @@ h2, h3 {
 
 .sidebar-nav {
 	margin-left: 0;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 	list-style: none;
 	li {
 		margin: 0;
@@ -128,8 +135,36 @@ h2, h3 {
 	}
 }
 
+.section-title {
+	margin: 0;
+	padding: 20px 100px;
+	//font-size: 300%;
+	//font-family: 'Cookie', cursive;
+	background: rgba($cauldron-border, .25);
+	//color: ;
+	margin-top: -1px;
+	//margin-left: -1px;
+	//background: rgba(#efefef, .5);
+	border-bottom: 1px solid $cauldron-border;
+
+	@include breakpoint(medium) {
+		padding: 20px 40px;
+	}
+}
+
 h4 {
 	color: #999;
+}
+
+.view-source {
+	font-size: 60%;
+	float: right;
+	text-decoration: none;
+	color: #999;
+	font-weight: 400;
+	&:hover {
+		color: #555;
+	}
 }
 
 .prettyprint {
@@ -138,6 +173,19 @@ h4 {
 	tab-size: 2;
 	-moz-tab-size: 2;
 	-o-tab-size: 2;
+
+	&.large {
+		font-size: 100%;
+	}
+
+	&.no-bg {
+		background: none;
+		padding: 0;
+	}
+}
+
+.tab-in {
+	margin-left: 3rem;
 }
 
 .pane {

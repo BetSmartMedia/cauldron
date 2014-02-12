@@ -1,5 +1,7 @@
 // Defaults
 $border-radius: 3px !default;
+$btn-padding: .5em 1.25em !default;
+$btn-margin: 0 .2em .7em 0 !default;
 
 $btn-primary-bg: #ff6418 !default;
 $btn-primary-colour: white !default;
@@ -16,13 +18,17 @@ $btn-tertiary-colour: #333 !default;
 	background: none;
 	border: none;
 	cursor: pointer;
-	padding: .35em 1.25em;
-	margin-right: .2em;
-	margin-bottom: .7em;
+	padding: $btn-padding;
+	margin: $btn-margin;
 	white-space: nowrap;
 	display: inline-block;
+	text-align: center;
 	@include border-radius($border-radius);
 	@include transition(all .1s ease-in-out);
+
+	&:active {
+		@include box-shadow(inset 0 1px .75em rgba(black, .5));
+	}
 
 	// Modifiers: 1 propert
 	&.pill { @include border-radius(50em); }
@@ -34,11 +40,11 @@ $btn-tertiary-colour: #333 !default;
 	@extend .btn;
 	background: $btn-primary-bg;
 	color: $btn-primary-colour;
-	&:hover {
+	&:hover, &:active {
 		background-color: darken($btn-primary-bg, 20%);
 	}
 	&:active {
-		background-color: darken($btn-primary-bg, 50%);
+		color: darken($btn-primary-colour, 20%);
 		@include opacity(.8);
 	}
 }
@@ -47,11 +53,11 @@ $btn-tertiary-colour: #333 !default;
 	@extend .btn;
 	background: $btn-secondary-bg;
 	color: $btn-secondary-colour;
-	&:hover {
+	&:hover, &:active {
 		background-color: darken($btn-secondary-bg, 20%);
 	}
 	&:active {
-		background-color: darken($btn-secondary-bg, 50%);
+		color: darken($btn-secondary-colour, 20%);
 		@include opacity(.8);
 	}
 }
@@ -60,20 +66,20 @@ $btn-tertiary-colour: #333 !default;
 	@extend .btn;
 	background: $btn-tertiary-bg;
 	color: $btn-tertiary-colour;
-	&:hover {
+	&:hover, &:active {
 		color: $btn-tertiary-colour;
 		background-color: darken($btn-tertiary-bg, 20%);
 	}
 	&:active {
-		background-color: darken($btn-tertiary-bg, 50%);
+		color: lighten($btn-tertiary-colour, 20%);
 		@include opacity(.8);
 	}
 }
 
 
 /**
- * Button modifiers:
- * Used in conjunction with above btns: class="btn-primary white-btn"
+ * Button modifiers, used in conjunction with above btns:
+ *   class="btn white-btn"
  */
 .white-btn {
 	background-color: white;
@@ -83,6 +89,11 @@ $btn-tertiary-colour: #333 !default;
 	&:hover {
 		background: #efefef;
 	}
+
+	&:active {
+		color: #999;
+		@include box-shadow(inset 0 1px .75em rgba(black, .15));
+	}
 }
 
 .black-btn {
@@ -91,5 +102,9 @@ $btn-tertiary-colour: #333 !default;
 
 	&:hover {
 		color: #ccc;
+	}
+
+	&:active {
+		color: #999;
 	}
 }

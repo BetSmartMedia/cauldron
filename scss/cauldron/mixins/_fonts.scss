@@ -1,10 +1,8 @@
-@mixin font-size($size: 1.6, $line: $size * 1.5){
-	// font-size:   ($size * 10) + px;
-	// line-height: ($line * 10) + px;
-	// font-size:   $size + rem;
-	// line-height: $line + rem;
-	font-size:   $size + px;
-	line-height: $line + px;
+@mixin font-size($size: 1.6, $line-height: $size * 1.5){
+	font-size:   ($size * 10) + px;
+	line-height: ($line * 10) + px;
+	font-size:   $size + rem;
+	line-height: $line + rem;
 }
 
 @mixin text-truncate {

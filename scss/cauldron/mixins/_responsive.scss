@@ -55,17 +55,21 @@
 			@content;
 		}
 	}
+
+	// Default
+	@else {
+		@include respond($breakpoint, $media);
+	}
 }
 
-@mixin hidden($media) {
-	@include breakpoint($media) {
+@mixin hidden($breakpoint) {
+	@include breakpoint($breakpoint) {
 		display: none !important;
 	}
 }
 
-// Mixin for visible
-@mixin visible($media) {
-	@include breakpoint($media) {
+@mixin visible($breakpoint) {
+	@include breakpoint($breakpoint) {
 		display: inherit !important;
 	}
 }

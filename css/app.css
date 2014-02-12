@@ -412,16 +412,16 @@ table {
   border: none;
 }
 
-/* line 15, ../scss/cauldron/modules/_buttons.scss */
+/* line 17, ../scss/cauldron/modules/_buttons.scss */
 .btn, .btn-primary, .btn-secondary, .btn-tertiary, button {
   background: none;
   border: none;
   cursor: pointer;
-  padding: .35em 1.25em;
-  margin-right: .2em;
-  margin-bottom: .7em;
+  padding: 0.5em 1.25em;
+  margin: 0 0.2em 0.7em 0;
   white-space: nowrap;
   display: inline-block;
+  text-align: center;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -432,7 +432,13 @@ table {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
-/* line 28, ../scss/cauldron/modules/_buttons.scss */
+/* line 29, ../scss/cauldron/modules/_buttons.scss */
+.btn:active, .btn-primary:active, .btn-secondary:active, .btn-tertiary:active, button:active {
+  -webkit-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.5);
+}
+/* line 34, ../scss/cauldron/modules/_buttons.scss */
 .btn.pill, .pill.btn-primary, .pill.btn-secondary, .pill.btn-tertiary, button.pill {
   -webkit-border-radius: 50em;
   -moz-border-radius: 50em;
@@ -440,89 +446,100 @@ table {
   -o-border-radius: 50em;
   border-radius: 50em;
 }
-/* line 29, ../scss/cauldron/modules/_buttons.scss */
+/* line 35, ../scss/cauldron/modules/_buttons.scss */
 .btn.disabled, .disabled.btn-primary, .disabled.btn-secondary, .disabled.btn-tertiary, button.disabled {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
   cursor: default;
 }
-/* line 30, ../scss/cauldron/modules/_buttons.scss */
+/* line 36, ../scss/cauldron/modules/_buttons.scss */
 .btn.full-width, .full-width.btn-primary, .full-width.btn-secondary, .full-width.btn-tertiary, .btn.block, .block.btn-primary, .block.btn-secondary, .block.btn-tertiary, button.full-width, button.block {
   display: block;
 }
 
-/* line 33, ../scss/cauldron/modules/_buttons.scss */
+/* line 39, ../scss/cauldron/modules/_buttons.scss */
 .btn-primary {
   background: #ff6418;
   color: white;
 }
-/* line 37, ../scss/cauldron/modules/_buttons.scss */
-.btn-primary:hover {
+/* line 43, ../scss/cauldron/modules/_buttons.scss */
+.btn-primary:hover, .btn-primary:active {
   background-color: #b13a00;
 }
-/* line 40, ../scss/cauldron/modules/_buttons.scss */
+/* line 46, ../scss/cauldron/modules/_buttons.scss */
 .btn-primary:active {
-  background-color: #180800;
+  color: #cccccc;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 46, ../scss/cauldron/modules/_buttons.scss */
+/* line 52, ../scss/cauldron/modules/_buttons.scss */
 .btn-secondary {
   background: #515151;
   color: white;
 }
-/* line 50, ../scss/cauldron/modules/_buttons.scss */
-.btn-secondary:hover {
+/* line 56, ../scss/cauldron/modules/_buttons.scss */
+.btn-secondary:hover, .btn-secondary:active {
   background-color: #1e1e1e;
 }
-/* line 53, ../scss/cauldron/modules/_buttons.scss */
+/* line 59, ../scss/cauldron/modules/_buttons.scss */
 .btn-secondary:active {
-  background-color: black;
+  color: #cccccc;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 59, ../scss/cauldron/modules/_buttons.scss */
+/* line 65, ../scss/cauldron/modules/_buttons.scss */
 .btn-tertiary {
   background: #cccccc;
   color: #333333;
 }
-/* line 63, ../scss/cauldron/modules/_buttons.scss */
-.btn-tertiary:hover {
+/* line 69, ../scss/cauldron/modules/_buttons.scss */
+.btn-tertiary:hover, .btn-tertiary:active {
   color: #333333;
   background-color: #999999;
 }
-/* line 67, ../scss/cauldron/modules/_buttons.scss */
+/* line 73, ../scss/cauldron/modules/_buttons.scss */
 .btn-tertiary:active {
-  background-color: #4d4d4d;
+  color: #666666;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
 /**
- * Button modifiers:
- * Used in conjunction with above btns: class="btn-primary white-btn"
+ * Button modifiers, used in conjunction with above btns:
+ *   class="btn white-btn"
  */
-/* line 78, ../scss/cauldron/modules/_buttons.scss */
+/* line 84, ../scss/cauldron/modules/_buttons.scss */
 .white-btn {
   background-color: white;
   color: black;
   border: 1px solid #ccc;
 }
-/* line 83, ../scss/cauldron/modules/_buttons.scss */
+/* line 89, ../scss/cauldron/modules/_buttons.scss */
 .white-btn:hover {
   background: #efefef;
 }
+/* line 93, ../scss/cauldron/modules/_buttons.scss */
+.white-btn:active {
+  color: #999;
+  -webkit-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px 0.75em rgba(0, 0, 0, 0.15);
+}
 
-/* line 88, ../scss/cauldron/modules/_buttons.scss */
+/* line 99, ../scss/cauldron/modules/_buttons.scss */
 .black-btn {
   background-color: black;
   color: white;
 }
-/* line 92, ../scss/cauldron/modules/_buttons.scss */
+/* line 103, ../scss/cauldron/modules/_buttons.scss */
 .black-btn:hover {
   color: #ccc;
+}
+/* line 107, ../scss/cauldron/modules/_buttons.scss */
+.black-btn:active {
+  color: #999;
 }
 
 /* line 13, ../scss/cauldron/modules/_lists.scss */
@@ -597,20 +614,7 @@ label {
   font-weight: bold;
 }
 
-/*
-input, textarea, select {
-	padding: $field-padding;
-	border: 1px solid #ccc;
-	@include border-radius($field-border-radius);
-	@include box-shadow(none);
-
-	&:focus {
-		outline: none;
-		@include box-shadow(0 0 10px $field-focus);
-	}
-}
-*/
-/* line 53, ../scss/cauldron/modules/_forms.scss */
+/* line 39, ../scss/cauldron/modules/_forms.scss */
 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
 textarea, select {
   webkit-appearance: none;
@@ -639,12 +643,12 @@ textarea, select {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 75, ../scss/cauldron/modules/_forms.scss */
+/* line 61, ../scss/cauldron/modules/_forms.scss */
 textarea {
   min-height: 150px;
 }
 
-/* line 83, ../scss/cauldron/modules/_forms.scss */
+/* line 69, ../scss/cauldron/modules/_forms.scss */
 input[type="radio"] + label, input[type="checkbox"] + label {
   margin-right: 20px;
   font-weight: normal;
@@ -980,12 +984,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-/* line 1, ../scss/app/_layout.scss */
+/* line 3, ../scss/app/_layout.scss */
 .page-wrap {
   width: 100%;
 }
 
-/* line 7, ../scss/app/_layout.scss */
+/* line 9, ../scss/app/_layout.scss */
 .large-page {
   width: 1120px;
   max-width: 100%;
@@ -995,54 +999,44 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 7, ../scss/app/_layout.scss */
+  /* line 9, ../scss/app/_layout.scss */
   .large-page {
     padding: 15px;
   }
 }
 @media only all and (max-width: 767px) {
-  /* line 7, ../scss/app/_layout.scss */
+  /* line 9, ../scss/app/_layout.scss */
   .large-page {
     padding: 10px !important;
   }
 }
 
-/* line 23, ../scss/app/_layout.scss */
+/* line 25, ../scss/app/_layout.scss */
 .full-page {
   padding: 30px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  /* line 23, ../scss/app/_layout.scss */
+  /* line 25, ../scss/app/_layout.scss */
   .full-page {
     padding: 15px;
   }
 }
 
-/* line 30, ../scss/app/_layout.scss */
+/* line 32, ../scss/app/_layout.scss */
 .page-content {
-  width: 75%;
-  float: right;
-  font-size: 110%;
-  padding: 0 30px;
-  min-height: 350px;
-  border-left: 1px solid 1px solid #ababab;
+  padding: 30px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media only all and (max-width: 480px) {
-  /* line 30, ../scss/app/_layout.scss */
+  /* line 32, ../scss/app/_layout.scss */
   .page-content {
-    width: 100%;
-    border-left: none;
-    margin-left: 0;
-    padding: 0;
-    margin-top: -30px;
     font-size: 90%;
   }
 }
 
-/* line 49, ../scss/app/_layout.scss */
+/* line 41, ../scss/app/_layout.scss */
 .narrow {
   margin: 0 auto;
   max-width: 600px;

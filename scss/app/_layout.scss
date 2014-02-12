@@ -1,3 +1,5 @@
+$gutter: 20px !default;
+
 .page-wrap {
 	width: 100%;
 	//min-height: 100%;
@@ -28,20 +30,10 @@
 }
 
 .page-content {
-	width: 75%;
-	float: right;
-	font-size: 110%;
-	padding: 0 $gutter;
-	min-height: 350px;
-	border-left: 1px solid $border-colour;
+	padding: $gutter;
 	@include box-sizing(border-box);
 
 	@include breakpoint(small-phones) {
-		width: 100%;
-		border-left: none;
-		margin-left: 0;
-		padding: 0;
-		margin-top: -30px;
 		font-size: 90%;
 	}
 }

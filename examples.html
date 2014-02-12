@@ -8,7 +8,7 @@
 	·▀▀▀  ▀  ▀  ▀▀▀ .▀▀▀ ▀▀▀▀▀• .▀  ▀ ▀█▄▀▪▀▀ █▪
 
 	Cauldron Framework
-	https://github.com/jonathancochran
+	https://github.com/BetSmartMedia/cauldron
 
 	(c) Bet Smart Media
 	Author:  Jonathan Cochran <jon@betsmartmdia.com>
@@ -24,15 +24,17 @@
 		<meta name="viewport" content="initial-scale=1">
 
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cookie" type="text/css">
-		<link rel="stylesheet" href="js/lib/google-code-prettify/hemisu-light.css">
+		<link rel="stylesheet" href="js/lib/google-code-prettify/tomorrow.css">
 		<link rel="stylesheet" href="css/cauldron/examples.css">
 
 		<script src="js/lib/modernizr-2.7.1.min.js"></script>
 		<script src="js/lib/google-code-prettify/prettify.js"></script>
 		<script src="js/lib/google-code-prettify/lang-css.js"></script>
+		<script src="js/lib/google-code-prettify/lang-scss.js"></script>
 
 	</head>
 	<body onload="prettyPrint()">
+		<a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
 
 		<aside class="sidebar">
 			<a href="#top" class="logo"><img src="img/logo.png" /></a>
@@ -45,6 +47,14 @@
 				<li><a href="#modifiers">Modifiers</a></li>
 				<li><a href="#panes">Panes</a></li>
 			</ul>
+
+			<h3>Mixins</h3>
+			<ul class="sidebar-nav">
+				<li><a href="#animations">Animations</a></li>
+				<li><a href="#fonts">Fonts</a></li>
+				<li><a href="#responsive">Responsive</a></li>
+				<li><a href="#retina">Retina</a></li>
+			</ul>
 		</aside>
 
 
@@ -56,10 +66,8 @@
 
 				<p>
 					Cauldron is modular SASS framework and HTML boilerplate to
-					bootstrap your web & mobile projects.
-					Cauldron strives to be assumption-free and allows you to
-					easily pick and choose the parts you need. Think of Cauldron
-					as the pot which holds a tasty blend of things you might need.
+					bootstrap your web & mobile projects. Cauldron Cauldron lets you pick
+					and choose only the parts you need.
 				</p>
 
 				<h3>Style it your way</h3>
@@ -87,29 +95,34 @@ $btn-primary-colour: white;
 				<!--<p>Download, tweet, fork it (top right badge)</p>-->
 			</section>
 
+			<h1 class="section-title">Modules</h1>
+
 			<!-- ALERTS -->
 			<section id="alerts">
-				<h2>scss/cauldron/_alerts.scss</h2>
+				<h2>
+					modules/_alerts.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/modules/_alerts.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
 				<h4>Example</h4>
 				<div class="example">
 					<div class="alert">
-						Welcome to our site.
+						Welcome to our site
 					</div>
 
 					<div class="alert alert-success">
-						Form successfully submitted!
+						Form successfully submitted
 					</div>
 
 					<div class="alert alert-info">
-						Your credit cart expires in 30 days.
+						Nothing but blue skies today
 					</div>
 
 					<div class="alert alert-warning">
-						Warning: lock your doors.
+						Your credit cart expires in 30 days
 					</div>
 
 					<div class="alert alert-danger">
-						Error: email requried.
+						Error: email requried
 					</div>
 				</div>
 
@@ -125,7 +138,10 @@ $btn-primary-colour: white;
 
 			<!-- BUTTONS -->
 			<section id="buttons">
-				<h2>scss/cauldron/_buttons.scss</h2>
+				<h2>
+					modules/_buttons.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/modules/_buttons.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
 				<h4>Example</h4>
 				<div class="example">
 					<a class="btn">.btn</a>
@@ -155,7 +171,10 @@ $btn-primary-colour: white;
 
 			<!-- FORMS -->
 			<section id="forms">
-				<h2>scss/cauldron/_forms.scss</h2>
+				<h2>
+					modules/_forms.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/modules/_forms.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
 				<p>Wrap your form labels / inputs in a parent div with the
 					<strong>.form-row</strong> class.<br />
 					@todo: more work on forms
@@ -263,7 +282,11 @@ $btn-primary-colour: white;
 
 			<!-- LISTS -->
 			<section id="lists">
-				<h2>scss/cauldron/_lists.scss</h2>
+				<h2>
+					modules/_lists.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/modules/_lists.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
+
 				<h3>Normal Lists</h3>
 				<h4>Example</h4>
 				<div class="example">
@@ -325,7 +348,10 @@ $btn-primary-colour: white;
 
 			<!-- MODIFIERS -->
 			<section id="modifiers">
-				<h2>scss/cauldron/_modifiers.scss</h2>
+				<h2>
+					modules/_modifiers.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/modules/_modifiers.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
 				<p>
 					Modifiers are 1 line pieces of code which make a small
 					modification on existing behaviour. See the _modifiers.scss
@@ -352,7 +378,10 @@ $btn-primary-colour: white;
 
 			<!-- PANES -->
 			<section id="panes">
-				<h2>scss/cauldron/_panes.scss</h2>
+				<h2>
+					modules/_panes.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/modules/_panes.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
 				<p>
 					Panes are simply content blocks. You can optionally include
 					a pane header and pane content child div which provide some
@@ -383,9 +412,213 @@ $btn-primary-colour: white;
 </pre>
 			</section>
 
+			<h1 class="section-title">Mixins</h1>
+
+
+			<section id="animations">
+				<h2>
+					mixins/_animations.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/mixins/_animations.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
+<pre class="prettyprint large no-bg">
+@mixin keyframe($animation-name) { ... } // Cross-browser keyframe css function
+</pre>
+				<h4>Usage</h4>
+				<pre class="prettyprint lang-scss">
+@include keyframe(bouncy-ball) {
+	from {
+		top: -50px;
+	}
+	to {
+		top: 0px;
+	}
+}
+
+.ball {
+	@include animation(bouncy-ball .5s infinite);
+}
+</pre>
+
+<hr />
+
+<pre class="prettyprint large no-bg">
+@mixin animation($animation) // Cross-browser supported animation
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.ball {
+	@include animation(bouncy-ball .5s infinite);
+}
+</pre>
+			</section>
+
+			<section id="fonts">
+				<h2>
+					mixins/_fonts.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/mixins/_fonts.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
+
+<pre class="prettyprint large no-bg">
+/**
+ * @param $size        - Font size in rem with px fallback for older browsers
+ * @param $line-height - (Optional) default is font-size * 1.5
+ */
+@mixin font-size($size, $line-height)
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.lead {
+	@include font-size(2);
+}
+</pre>
+<hr />
+
+<pre class="prettyprint large no-bg">
+@mixin text-truncate() // Truncate text with ellipsis
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.lead {
+	@include font-size(2);
+	@include text-truncate();
+}
+</pre>
+<hr />
+
+<pre class="prettyprint large no-bg">
+/**
+ * @param $font-family    - Font name for reference in css
+ * @param $file-path      - Name of font file without extension
+ * @param $weight         - Normal, bold, or numeric weight e.g. 100, 500, 700
+ * @param $style          - Normal, italic
+ * @param $asset-pipeline - (Bool) Default false. If true, uses font-url defined in config.rb
+ */
+@mixin font-face($font-family, $file-path, $weight, $style, $asset-pipeline)
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.lead {
+	@include font-size(2);
+	@include text-truncate();
+	@include font-face('GaramondPro', '../fonts/GaramondPro');
+}
+</pre>
+			</section>
+
+			<section id="responsive">
+				<h2>
+					mixins/_responsive.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/mixins/_responsive.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
+
+<pre class="prettyprint large no-bg">
+/**
+ * @param $breakpoint - Custom breakpoint, e.g.: max-width: 660px
+ * @param $media      - Media types. Default is 'all'
+ */
+@mixin respond($breakpoint, $media) { ... }
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.content {
+	// 80% font size for smaller devices
+	@include respond('max-width: 600px') {
+		font-size: 80%;
+	}
+}
+</pre>
+<hr />
+
+<pre class="prettyprint large no-bg">
+/**
+ * @param $breakpoint - Defined list of sizes and devices:
+ *                    - small, medium, large, xlarge
+ *                    - small-phones, phones, tablets, desktop
+ * @param $media      - Media types. Default is 'all'
+ */
+@mixin breakpoint($breakpoint, $media) { ... }
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.content {
+	// css for tablets
+	@include breakpoint(tablets) {
+		//...
+	}
+
+	// css for phones
+	@include breakpoint(phones) {
+		// ...
+	}
+}
+</pre>
+<hr />
+
+<pre class="prettyprint large no-bg">
+/**
+ * @param $breakpoint - Defined list of sizes and devices:
+ *                    - small, medium, large, xlarge
+ *                    - small-phones, phones, tablets, desktop
+ *                    - or custom query: max-width: 660px
+ */
+@mixin hidden($breakpoint)
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.primary-nav {
+	@include hidden(phones); // hide nav on mobile devices
+}
+</pre>
+<hr />
+
+<pre class="prettyprint large no-bg">
+/**
+ * @param $breakpoint - Defined list of sizes and devices:
+ *                    - small, medium, large, xlarge
+ *                    - small-phones, phones, tablets, desktop
+ *                    - or custom query: max-width: 660px
+ */
+@mixin visible($breakpoint)
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+.mobile-nav {
+	display: none;
+	@include visible(phones); // show nav on mobile devices
+}
+</pre>
+			</section>
+
+			<section id="retina">
+				<h2>
+					mixins/_retina.scss
+					<a href="https://github.com/BetSmartMedia/cauldron/blob/master/scss/cauldron/mixins/_retina.scss" target="_blank" class="btn white-btn pill view-source">view source</a>
+				</h2>
+				<p>
+					<a href="http://www.retinajs.com" target="_blank">Retina.js</a>
+					helper mixin for applying high-resolution background
+					images from Nathan Crank.
+				</p>
+
+<pre class="prettyprint large no-bg">
+/**
+ * @param $path - Path to image
+ * @param $ext  - Extensions. Default '.jpg'
+ * @param $w    - Width. Default 'auto'
+ * @param $h    - Height. Default 'auto'
+ */
+@mixin at2x($path, $ext, $w, $h)
+</pre>
+<h4>Usage</h4>
+<pre class="prettyprint lang-scss">
+body {
+	// will output background.jpg and background@2x.jpg depending on
+	// the device resolution
+	@include at2x('background');
+}
+</pre>
+			</section>
 		</div>
-
-
 
 	</body>
 </html>

@@ -5,7 +5,7 @@ $form-font-size: 0.77778rem !default;
 
 $form-field-background: white !default;
 $form-field-border: 1px solid #ccc !default;
-$form-field-focus: #a5cad8;
+$form-field-focus: #a5cad8 !default;
 $form-field-margin: 0 0 0.88889rem 0 !default;
 $form-field-padding: 0.44444rem !default;
 $form-field-shadow: true !default;
@@ -35,20 +35,6 @@ label {
 //------------------------------------------------------------------------------
 // Input, textarea, select
 //------------------------------------------------------------------------------
-/*
-input, textarea, select {
-	padding: $field-padding;
-	border: 1px solid #ccc;
-	@include border-radius($field-border-radius);
-	@include box-shadow(none);
-
-	&:focus {
-		outline: none;
-		@include box-shadow(0 0 10px $field-focus);
-	}
-}
-*/
-
 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
 textarea, select {
 	webkit-appearance: none;

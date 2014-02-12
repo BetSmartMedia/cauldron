@@ -16,8 +16,8 @@ Cauldron strives to be assumption-free and allow you to easily pick and choose t
 **Module examples:** see the examples.html file
 
 
-## Why another Ghaddamn framework?
-Cauldron was created out of burning frustration. I started this project because frankly I haven't found "the perfect framework" which is always my goto. My frustrations lie in the inability to extract pieces from other frameworks without using the WHOLE FOOK'N FRAMEWORK. There are some great frameworks out there, but the majority exceed 200kb and make your app look like their framework (without some heavy overriding).
+## Why another goddamn framework?
+Cauldron was created out of burning frustration. I started this project because frankly I haven't found "the perfect framework" which is always my goto. My frustrations lie in the inability to extract pieces from other frameworks without using the WHOLE FRAMEWORK. There are some great frameworks out there, but the majority exceed 200kb and make your app look like their framework (without some heavy overriding).
 
 I wanted stylish & sexy modules which were light-weight. Modules which I could reuse individually in other projects (without using the whole framework). I wanted bare-bones styles that I could morph into any design easily. I needed  libraries from around the web for every project and it was always a repeat process to go and redownload them. I didn't want a bunch of extra fluff that I rarely used. I wanted only common things that I found myself reusing across various projects.
 
@@ -47,7 +47,7 @@ I've coded Cauldron with a few conventions in mind that I recommend you stick wi
 
 ## Vendor libraries and contributors
 #### SCSS
-* **[retina.sass](http://www.retinajs.com)** is a helper mixin for applying high-resolution background images
+* **[retina.scss](http://www.retinajs.com)** is a helper mixin for applying high-resolution background images
 * **[normalize.scss](https://github.com/kristerkari/normalize.scss)** is a port of the poular normalize.css which makes things look consistent across all the browser.
 
 #### Javascript
