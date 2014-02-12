@@ -1,0 +1,35 @@
+@mixin font-size($size: 1.6, $line-height: $size * 1.5){
+	font-size:   ($size * 10) + px;
+	line-height: ($line * 10) + px;
+	font-size:   $size + rem;
+	line-height: $line + rem;
+}
+
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+	@font-face {
+		font-family: $font-family;
+		font-weight: $weight;
+		font-style: $style;
+
+		@if $asset-pipeline == true {
+			src: font-url('#{$file-path}.eot');
+			src: font-url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+			     font-url('#{$file-path}.woff')                format('woff'),
+			     font-url('#{$file-path}.ttf')                 format('truetype'),
+			     font-url('#{$file-path}.svg##{$font-family}') format('svg');
+		} @else {
+			src: url('#{$file-path}.eot');
+			src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+			     url('#{$file-path}.woff')                     format('woff'),
+			     url('#{$file-path}.ttf')                      format('truetype'),
+			     url('#{$file-path}.svg##{$font-family}')      format('svg');
+		}
+	}
+}

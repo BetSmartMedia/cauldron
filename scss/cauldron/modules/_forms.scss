@@ -1,0 +1,73 @@
+$border-radius: 3px !default;
+
+$form-font-colour: rgba(black, 0.75) !default;
+$form-font-size: 0.77778rem !default;
+
+$form-field-background: white !default;
+$form-field-border: 1px solid #ccc !default;
+$form-field-focus: #a5cad8 !default;
+$form-field-margin: 0 0 0.88889rem 0 !default;
+$form-field-padding: 0.44444rem !default;
+$form-field-shadow: true !default;
+
+
+//------------------------------------------------------------------------------
+// Form structure
+//------------------------------------------------------------------------------
+.form-row {
+	padding: 5px;
+	padding-bottom: 10px;
+	margin-left: -5px;
+	@include clearfix();
+
+	> label {
+		display: block;
+		padding: 3px 0;
+	}
+}
+
+label {
+	font-size: .9rem;
+	font-weight: bold;
+}
+
+
+//------------------------------------------------------------------------------
+// Input, textarea, select
+//------------------------------------------------------------------------------
+input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+textarea, select {
+	webkit-appearance: none;
+	background-color: $form-field-background;
+	border: $form-field-border;
+	color: $form-font-colour;
+	display: block;
+	width: 100%;
+
+	font-size: $form-font-size;
+	//margin: $form-field-margin;
+	padding: $form-field-padding;
+	height: 2.05556rem;
+
+	@include transition(all 0.15s linear);
+	@include box-sizing(border-box);
+	@include border-radius($border-radius);
+
+	@if $form-field-shadow == true {
+		@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
+	}
+}
+
+textarea {
+	min-height: 150px;
+}
+
+//------------------------------------------------------------------------------
+// Radio, checkbox
+//------------------------------------------------------------------------------
+input[type="radio"], input[type="checkbox"] {
+	& + label {
+		margin-right: 20px;
+		font-weight: normal;
+	}
+}
