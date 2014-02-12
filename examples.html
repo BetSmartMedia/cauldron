@@ -182,9 +182,8 @@ $btn-primary-colour: white;
 				</h2>
 				<p>Wrap your form labels / inputs in a parent div with the
 					<strong>.form-row</strong> class.<br />
-					@todo: more work on forms
 
-				<h3>Labels Above Inputs</h3>
+				<h3>Labels above inputs</h3>
 				<h4>Example</h4>
 				<div class="example" style="max-width: 600px">
 					<div class="form-row">
@@ -281,6 +280,82 @@ $btn-primary-colour: white;
 	&lt;button&gt;Forgot Password?&lt;/button&gt;
 &lt;/div&gt;
 </pre>
+				<hr />
+
+				<h3>Labels beside inputs</h3>
+				<p>
+					To use inline labels simply add the class <strong>.inline</strong>
+					to <strong>.form-row</strong>.
+				</p>
+				<h4>Example</h4>
+				<div class="example" style="max-width: 600px">
+					<div class="form-row inline">
+						<label for="name" class="required">Full name:</label>
+						<input type="text" name="name" id="name" required />
+					</div>
+					<div class="form-row inline">
+						<label for="income" class="required">Income:</label>
+						<select name="income" id="income">
+							<option>$0 - $20,000</option>
+							<option>$20,000 - $40,000</option>
+							<option>$40,000 - $60,000</option>
+							<option>$60,000 - $80,000</option>
+							<option>$80,000 - $100,000</option>
+							<option>$100,000+</option>
+						</select>
+					</div>
+					<div class="form-row inline">
+						<label class="required">Favourite drink:</label>
+						<div class="radio-group">
+							<input type="radio" name="drink" id="coke" value="coke" />
+							<label for="coke">Coke</label>
+
+							<input type="radio" name="drink" id="pepsi" value="pepsi" />
+							<label for="pepsi">Pepsi</label>
+
+							<input type="radio" name="drink" id="grape" value="grape" />
+							<label for="grape">Grape drink</label>
+						</div>
+					</div>
+					<div class="form-row inline">
+						<button class="btn-primary">Submit</button>
+					</div>
+				</div>
+
+<h4>Markup</h4>
+<pre class="prettyprint lang-html">
+&lt;div class=&quot;form-row inline&quot;&gt;
+	&lt;label for=&quot;name&quot; class=&quot;required&quot;&gt;Full name:&lt;/label&gt;
+	&lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot; required /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-row inline&quot;&gt;
+	&lt;label for=&quot;income&quot; class=&quot;required&quot;&gt;Income:&lt;/label&gt;
+	&lt;select name=&quot;income&quot; id=&quot;income&quot;&gt;
+		&lt;option&gt;$0 - $20,000&lt;/option&gt;
+		&lt;option&gt;$20,000 - $40,000&lt;/option&gt;
+		&lt;option&gt;$40,000 - $60,000&lt;/option&gt;
+		&lt;option&gt;$60,000 - $80,000&lt;/option&gt;
+		&lt;option&gt;$80,000 - $100,000&lt;/option&gt;
+		&lt;option&gt;$100,000+&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-row inline&quot;&gt;
+	&lt;label class=&quot;required&quot;&gt;Favourite drink:&lt;/label&gt;
+	&lt;div class=&quot;radio-group&quot;&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;drink&quot; id=&quot;coke&quot; value=&quot;coke&quot; /&gt;
+		&lt;label for=&quot;coke&quot;&gt;Coke&lt;/label&gt;
+
+		&lt;input type=&quot;radio&quot; name=&quot;drink&quot; id=&quot;pepsi&quot; value=&quot;pepsi&quot; /&gt;
+		&lt;label for=&quot;pepsi&quot;&gt;Pepsi&lt;/label&gt;
+
+		&lt;input type=&quot;radio&quot; name=&quot;drink&quot; id=&quot;grape&quot; value=&quot;grape&quot; /&gt;
+		&lt;label for=&quot;grape&quot;&gt;Grape drink&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-row inline&quot;&gt;
+	&lt;button class=&quot;btn-primary&quot;&gt;Submit&lt;/button&gt;
+&lt;/div&gt;
+</pre>
 
 			</section>
 
@@ -295,10 +370,13 @@ $btn-primary-colour: white;
 				<h3>Normal Lists</h3>
 				<h4>Example</h4>
 				<div class="example">
+					<h5>Unordered</h5>
 					<ul>
 						<li>Unordered list</li>
 						<li>Item example</li>
 					</ul>
+
+					<h5>Ordered</h5>
 					<ol>
 						<li>Ordered list</li>
 						<li>Item example</li>
@@ -429,7 +507,8 @@ $btn-primary-colour: white;
 @mixin keyframe($animation-name) { ... } // Cross-browser keyframe css function
 </pre>
 				<h4>Usage</h4>
-				<pre class="prettyprint lang-scss">
+
+<pre class="prettyprint lang-scss">
 @include keyframe(bouncy-ball) {
 	from {
 		top: -50px;

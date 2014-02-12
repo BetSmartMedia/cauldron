@@ -342,6 +342,20 @@ table {
   border-spacing: 0;
 }
 
+/**
+ * Custom media query function
+ * @param $breakpoint - is a string
+ */
+/**
+ * Create a breakpoint based on a keyword otherwise
+ * default to respond with a custom media query.
+ */
+/**
+ * Hide content based on breakpoint device or size
+ */
+/**
+ * Show content based on breakpoint device or size
+ */
 /* line 8, ../../scss/cauldron/modules/_alerts.scss */
 .alert {
   padding: .5em;
@@ -592,7 +606,7 @@ ul li:last-child, ol li:last-child {
   box-sizing: border-box;
 }
 
-/* line 17, ../../scss/cauldron/modules/_forms.scss */
+/* line 20, ../../scss/cauldron/modules/_forms.scss */
 .form-row {
   padding: 5px;
   padding-bottom: 10px;
@@ -600,19 +614,46 @@ ul li:last-child, ol li:last-child {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 23, ../../scss/cauldron/modules/_forms.scss */
+/* line 27, ../../scss/cauldron/modules/_forms.scss */
 .form-row > label {
   display: block;
-  padding: 3px 0;
+  padding: 0.44444rem 0;
+}
+/* line 33, ../../scss/cauldron/modules/_forms.scss */
+.form-row.inline label {
+  position: absolute;
+  width: 150px;
+  text-align: right;
+}
+/* line 38, ../../scss/cauldron/modules/_forms.scss */
+.form-row.inline input:not([type="radio"]):not([type="checkbox"]), .form-row.inline select, .form-row.inline textarea {
+  margin-left: 165px;
+  max-width: 400px;
+}
+/* line 43, ../../scss/cauldron/modules/_forms.scss */
+.form-row.inline .radio-group {
+  margin-left: 165px;
+  padding: 0.44444rem 0;
+}
+/* line 47, ../../scss/cauldron/modules/_forms.scss */
+.form-row.inline .radio-group label {
+  position: relative;
+  width: auto;
+  text-align: left;
+}
+/* line 54, ../../scss/cauldron/modules/_forms.scss */
+.form-row.inline button:first-child, .form-row.inline .btn-primary {
+  margin: 0.44444rem 0;
+  margin-left: 160px;
 }
 
-/* line 29, ../../scss/cauldron/modules/_forms.scss */
+/* line 61, ../../scss/cauldron/modules/_forms.scss */
 label {
   font-size: .9rem;
   font-weight: bold;
 }
 
-/* line 39, ../../scss/cauldron/modules/_forms.scss */
+/* line 71, ../../scss/cauldron/modules/_forms.scss */
 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
 textarea, select {
   webkit-appearance: none;
@@ -620,7 +661,8 @@ textarea, select {
   border: 1px solid #cccccc;
   color: rgba(0, 0, 0, 0.75);
   display: block;
-  width: 100%;
+  width: 400px;
+  max-width: 100%;
   font-size: 0.77778rem;
   padding: 0.44444rem;
   height: 2.05556rem;
@@ -641,12 +683,12 @@ textarea, select {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 61, ../../scss/cauldron/modules/_forms.scss */
+/* line 94, ../../scss/cauldron/modules/_forms.scss */
 textarea {
   min-height: 150px;
 }
 
-/* line 69, ../../scss/cauldron/modules/_forms.scss */
+/* line 102, ../../scss/cauldron/modules/_forms.scss */
 input[type="radio"] + label, input[type="checkbox"] + label {
   margin-right: 20px;
   font-weight: normal;
@@ -939,7 +981,6 @@ body {
   color: #333;
   font-family: 'Helvetica Neue', sans-serif;
   line-height: 1.42;
-  overflow-x: hidden;
 }
 
 /* line 34, ../../scss/cauldron/examples.scss */
@@ -949,33 +990,50 @@ h1.title {
   margin: .5em 0 .28em;
 }
 
-/* line 43, ../../scss/cauldron/examples.scss */
+/* line 40, ../../scss/cauldron/examples.scss */
+h2 {
+  overflow: hidden;
+  *zoom: 1;
+}
+@media only all and (max-width: 767px) {
+  /* line 40, ../../scss/cauldron/examples.scss */
+  h2 {
+    font-size: 100%;
+  }
+}
+
+/* line 47, ../../scss/cauldron/examples.scss */
+h4 {
+  color: #999;
+}
+
+/* line 51, ../../scss/cauldron/examples.scss */
 .logo {
   display: block;
   width: 130px;
   margin: 0 auto;
 }
-/* line 47, ../../scss/cauldron/examples.scss */
+/* line 55, ../../scss/cauldron/examples.scss */
 .logo img {
   max-width: 100%;
 }
-@media only all and (max-width: 767px) {
-  /* line 43, ../../scss/cauldron/examples.scss */
+@media only all and (max-width: 1024px) {
+  /* line 51, ../../scss/cauldron/examples.scss */
   .logo {
     width: 110px;
   }
 }
 
-/* line 55, ../../scss/cauldron/examples.scss */
+/* line 63, ../../scss/cauldron/examples.scss */
 a {
   color: #f5871f;
 }
-/* line 57, ../../scss/cauldron/examples.scss */
+/* line 65, ../../scss/cauldron/examples.scss */
 a:hover, a:active {
   color: #d76e0a;
 }
 
-/* line 62, ../../scss/cauldron/examples.scss */
+/* line 70, ../../scss/cauldron/examples.scss */
 .forkme {
   position: absolute;
   display: block;
@@ -988,12 +1046,12 @@ a:hover, a:active {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 71, ../../scss/cauldron/examples.scss */
+/* line 79, ../../scss/cauldron/examples.scss */
 .forkme:hover {
   opacity: 0.75;
 }
 
-/* line 75, ../../scss/cauldron/examples.scss */
+/* line 83, ../../scss/cauldron/examples.scss */
 .sidebar {
   position: fixed;
   width: 220px;
@@ -1006,23 +1064,23 @@ a:hover, a:active {
   box-sizing: border-box;
 }
 @media only all and (max-width: 480px) {
-  /* line 75, ../../scss/cauldron/examples.scss */
+  /* line 83, ../../scss/cauldron/examples.scss */
   .sidebar {
     display: none;
   }
 }
-@media only all and (max-width: 767px) {
-  /* line 75, ../../scss/cauldron/examples.scss */
+@media only all and (max-width: 1024px) {
+  /* line 83, ../../scss/cauldron/examples.scss */
   .sidebar {
     width: 190px;
   }
 }
-/* line 93, ../../scss/cauldron/examples.scss */
+/* line 101, ../../scss/cauldron/examples.scss */
 .sidebar h3 {
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 98, ../../scss/cauldron/examples.scss */
+/* line 106, ../../scss/cauldron/examples.scss */
 .sidebar a {
   color: #777;
   text-decoration: none;
@@ -1030,45 +1088,46 @@ a:hover, a:active {
   display: block;
   line-height: 1.72;
 }
-/* line 104, ../../scss/cauldron/examples.scss */
+/* line 112, ../../scss/cauldron/examples.scss */
 .sidebar a:hover {
   color: black;
 }
 
-/* line 110, ../../scss/cauldron/examples.scss */
+/* line 118, ../../scss/cauldron/examples.scss */
 .sidebar-nav {
   margin-left: 0;
   margin-bottom: 2em;
   list-style: none;
 }
-/* line 114, ../../scss/cauldron/examples.scss */
+/* line 122, ../../scss/cauldron/examples.scss */
 .sidebar-nav li {
   margin: 0;
 }
 
-/* line 119, ../../scss/cauldron/examples.scss */
+/* line 127, ../../scss/cauldron/examples.scss */
 .content {
   position: relative;
   margin-left: 220px;
+  overflow: hidden;
 }
-@media only all and (max-width: 767px) {
-  /* line 119, ../../scss/cauldron/examples.scss */
+@media only all and (max-width: 1024px) {
+  /* line 127, ../../scss/cauldron/examples.scss */
   .content {
     margin-left: 190px;
   }
 }
 @media only all and (max-width: 480px) {
-  /* line 119, ../../scss/cauldron/examples.scss */
+  /* line 127, ../../scss/cauldron/examples.scss */
   .content {
     margin-left: 0px;
   }
 }
-/* line 130, ../../scss/cauldron/examples.scss */
+/* line 139, ../../scss/cauldron/examples.scss */
 .content > section {
   padding: 40px 100px;
   border-bottom: 1px solid #cccccc;
 }
-/* line 134, ../../scss/cauldron/examples.scss */
+/* line 143, ../../scss/cauldron/examples.scss */
 .content > section hr {
   height: 1px;
   margin: 0px;
@@ -1078,14 +1137,14 @@ a:hover, a:active {
   margin: 40px 0;
   margin-right: -100px;
 }
-@media only all and (max-width: 767px) {
-  /* line 130, ../../scss/cauldron/examples.scss */
+@media only all and (max-width: 1024px) {
+  /* line 139, ../../scss/cauldron/examples.scss */
   .content > section {
     padding: 40px;
   }
 }
 
-/* line 150, ../../scss/cauldron/examples.scss */
+/* line 159, ../../scss/cauldron/examples.scss */
 .section-title {
   margin: 0;
   padding: 20px 100px;
@@ -1093,19 +1152,14 @@ a:hover, a:active {
   margin-top: -1px;
   border-bottom: 1px solid #cccccc;
 }
-@media only all and (max-width: 767px) {
-  /* line 150, ../../scss/cauldron/examples.scss */
+@media only all and (max-width: 1024px) {
+  /* line 159, ../../scss/cauldron/examples.scss */
   .section-title {
     padding: 20px 40px;
   }
 }
 
-/* line 167, ../../scss/cauldron/examples.scss */
-h4 {
-  color: #999;
-}
-
-/* line 171, ../../scss/cauldron/examples.scss */
+/* line 178, ../../scss/cauldron/examples.scss */
 .view-source {
   font-size: 60%;
   float: right;
@@ -1113,35 +1167,58 @@ h4 {
   color: #999;
   font-weight: 400;
 }
-/* line 177, ../../scss/cauldron/examples.scss */
+/* line 184, ../../scss/cauldron/examples.scss */
 .view-source:hover {
   color: #555;
 }
+@media only all and (max-width: 480px) {
+  /* line 178, ../../scss/cauldron/examples.scss */
+  .view-source {
+    display: none;
+  }
+}
 
-/* line 182, ../../scss/cauldron/examples.scss */
+/* line 191, ../../scss/cauldron/examples.scss */
 .prettyprint {
   background: #efefef;
   border: none;
   tab-size: 2;
   -moz-tab-size: 2;
   -o-tab-size: 2;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 189, ../../scss/cauldron/examples.scss */
+/* line 200, ../../scss/cauldron/examples.scss */
 .prettyprint.large {
-  font-size: 100%;
+  font-size: 90%;
 }
-/* line 193, ../../scss/cauldron/examples.scss */
+@media only all and (max-width: 1024px) {
+  /* line 200, ../../scss/cauldron/examples.scss */
+  .prettyprint.large {
+    font-size: 80%;
+  }
+}
+/* line 208, ../../scss/cauldron/examples.scss */
 .prettyprint.no-bg {
   background: none;
   padding: 0;
 }
+@media only all and (max-width: 480px) {
+  /* line 191, ../../scss/cauldron/examples.scss */
+  .prettyprint {
+    font-size: 60%;
+    overflow: auto;
+  }
+}
 
-/* line 199, ../../scss/cauldron/examples.scss */
+/* line 221, ../../scss/cauldron/examples.scss */
 .tab-in {
   margin-left: 3rem;
 }
 
-/* line 203, ../../scss/cauldron/examples.scss */
+/* line 225, ../../scss/cauldron/examples.scss */
 .pane {
   border: 1px solid #ccc;
   -webkit-border-radius: 3px;
@@ -1150,7 +1227,7 @@ h4 {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 206, ../../scss/cauldron/examples.scss */
+/* line 228, ../../scss/cauldron/examples.scss */
 .pane .pane-header {
   border-bottom: 1px solid #ccc;
 }
