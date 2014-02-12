@@ -972,7 +972,25 @@ a:hover, a:active {
   color: #d76e0a;
 }
 
-/* line 63, ../../scss/cauldron/examples.scss */
+/* line 62, ../../scss/cauldron/examples.scss */
+.forkme {
+  position: absolute;
+  display: block;
+  width: 149px;
+  height: 149px;
+  z-index: 999;
+  right: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+/* line 71, ../../scss/cauldron/examples.scss */
+.forkme:hover {
+  opacity: 0.75;
+}
+
+/* line 75, ../../scss/cauldron/examples.scss */
 .sidebar {
   position: fixed;
   width: 220px;
@@ -985,23 +1003,23 @@ a:hover, a:active {
   box-sizing: border-box;
 }
 @media only all and (max-width: 480px) {
-  /* line 63, ../../scss/cauldron/examples.scss */
+  /* line 75, ../../scss/cauldron/examples.scss */
   .sidebar {
     display: none;
   }
 }
 @media only all and (max-width: 767px) {
-  /* line 63, ../../scss/cauldron/examples.scss */
+  /* line 75, ../../scss/cauldron/examples.scss */
   .sidebar {
     width: 190px;
   }
 }
-/* line 81, ../../scss/cauldron/examples.scss */
+/* line 93, ../../scss/cauldron/examples.scss */
 .sidebar h3 {
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 86, ../../scss/cauldron/examples.scss */
+/* line 98, ../../scss/cauldron/examples.scss */
 .sidebar a {
   color: #777;
   text-decoration: none;
@@ -1009,45 +1027,45 @@ a:hover, a:active {
   display: block;
   line-height: 1.72;
 }
-/* line 92, ../../scss/cauldron/examples.scss */
+/* line 104, ../../scss/cauldron/examples.scss */
 .sidebar a:hover {
   color: black;
 }
 
-/* line 98, ../../scss/cauldron/examples.scss */
+/* line 110, ../../scss/cauldron/examples.scss */
 .sidebar-nav {
   margin-left: 0;
   margin-bottom: 2em;
   list-style: none;
 }
-/* line 102, ../../scss/cauldron/examples.scss */
+/* line 114, ../../scss/cauldron/examples.scss */
 .sidebar-nav li {
   margin: 0;
 }
 
-/* line 107, ../../scss/cauldron/examples.scss */
+/* line 119, ../../scss/cauldron/examples.scss */
 .content {
   position: relative;
   margin-left: 220px;
 }
 @media only all and (max-width: 767px) {
-  /* line 107, ../../scss/cauldron/examples.scss */
+  /* line 119, ../../scss/cauldron/examples.scss */
   .content {
     margin-left: 190px;
   }
 }
 @media only all and (max-width: 480px) {
-  /* line 107, ../../scss/cauldron/examples.scss */
+  /* line 119, ../../scss/cauldron/examples.scss */
   .content {
     margin-left: 0px;
   }
 }
-/* line 118, ../../scss/cauldron/examples.scss */
+/* line 130, ../../scss/cauldron/examples.scss */
 .content > section {
   padding: 40px 100px;
   border-bottom: 1px solid #cccccc;
 }
-/* line 122, ../../scss/cauldron/examples.scss */
+/* line 134, ../../scss/cauldron/examples.scss */
 .content > section hr {
   height: 1px;
   margin: 0px;
@@ -1058,13 +1076,13 @@ a:hover, a:active {
   margin-right: -100px;
 }
 @media only all and (max-width: 767px) {
-  /* line 118, ../../scss/cauldron/examples.scss */
+  /* line 130, ../../scss/cauldron/examples.scss */
   .content > section {
     padding: 40px;
   }
 }
 
-/* line 138, ../../scss/cauldron/examples.scss */
+/* line 150, ../../scss/cauldron/examples.scss */
 .section-title {
   margin: 0;
   padding: 20px 100px;
@@ -1073,18 +1091,18 @@ a:hover, a:active {
   border-bottom: 1px solid #cccccc;
 }
 @media only all and (max-width: 767px) {
-  /* line 138, ../../scss/cauldron/examples.scss */
+  /* line 150, ../../scss/cauldron/examples.scss */
   .section-title {
     padding: 20px 40px;
   }
 }
 
-/* line 155, ../../scss/cauldron/examples.scss */
+/* line 167, ../../scss/cauldron/examples.scss */
 h4 {
   color: #999;
 }
 
-/* line 159, ../../scss/cauldron/examples.scss */
+/* line 171, ../../scss/cauldron/examples.scss */
 .view-source {
   font-size: 60%;
   float: right;
@@ -1092,12 +1110,12 @@ h4 {
   color: #999;
   font-weight: 400;
 }
-/* line 165, ../../scss/cauldron/examples.scss */
+/* line 177, ../../scss/cauldron/examples.scss */
 .view-source:hover {
   color: #555;
 }
 
-/* line 170, ../../scss/cauldron/examples.scss */
+/* line 182, ../../scss/cauldron/examples.scss */
 .prettyprint {
   background: #efefef;
   border: none;
@@ -1105,22 +1123,22 @@ h4 {
   -moz-tab-size: 2;
   -o-tab-size: 2;
 }
-/* line 177, ../../scss/cauldron/examples.scss */
+/* line 189, ../../scss/cauldron/examples.scss */
 .prettyprint.large {
   font-size: 100%;
 }
-/* line 181, ../../scss/cauldron/examples.scss */
+/* line 193, ../../scss/cauldron/examples.scss */
 .prettyprint.no-bg {
   background: none;
   padding: 0;
 }
 
-/* line 187, ../../scss/cauldron/examples.scss */
+/* line 199, ../../scss/cauldron/examples.scss */
 .tab-in {
   margin-left: 3rem;
 }
 
-/* line 191, ../../scss/cauldron/examples.scss */
+/* line 203, ../../scss/cauldron/examples.scss */
 .pane {
   border: 1px solid #ccc;
   -webkit-border-radius: 3px;
@@ -1129,7 +1147,7 @@ h4 {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 194, ../../scss/cauldron/examples.scss */
+/* line 206, ../../scss/cauldron/examples.scss */
 .pane .pane-header {
   border-bottom: 1px solid #ccc;
 }

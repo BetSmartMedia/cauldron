@@ -59,6 +59,18 @@ a {
 	}
 }
 
+.forkme {
+	position: absolute;
+	display: block;
+	width: 149px;
+	height: 149px;
+	z-index: 999;
+	right: 0;
+	@include transition(all .2s ease-in-out);
+
+	&:hover { opacity: .75 }
+}
+
 
 .sidebar {
 	//background: white;
