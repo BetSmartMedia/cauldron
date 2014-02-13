@@ -1,0 +1,102 @@
+// Breakpoint sizes
+$breakpoint-small:  480px !default;
+$breakpoint-medium: 768px !default;
+$breakpoint-large:  1024px !default;
+$breakpoint-xlarge: 1280px !default;
+
+// Set true if buildling from mobile up
+$mobile-first: false !default;
+
+// Default desktop first apps
+$min-max: 'max';
+
+// Mobile first media queries
+@if $mobile-first == true {
+	$min-max: 'min';
+}
+
+/**
+ * Custom media query function
+ * @param $breakpoint - is a string
+ */
+@mixin respond($breakpoint, $media: all) {
+	@media only #{$media} and ($breakpoint) {
+		@content;
+	}
+}
+
+/**
+ * Create a breakpoint based on a keyword otherwise
+ * default to respond with a custom media query.
+ */
+@mixin breakpoint($breakpoint, $media: all) {
+
+
+	// Generic terms
+	@if $breakpoint == small {
+		@media only #{$media} and (#{$min-max}-width: $breakpoint-small) {
+			@content;
+		}
+	}
+	@else if $breakpoint == medium {
+		@media only #{$media} and (#{$min-max}-width: $breakpoint-medium - 1) {
+			@content;
+		}
+	}
+	@else if $breakpoint == large {
+		@media only #{$media} and (#{$min-max}-width: $breakpoint-large) {
+			@content;
+		}
+	}
+	@else if $breakpoint == xlarge {
+		@media only #{$media} and (#{$min-max}-width: $breakpoint-xlarge) {
+			@content;
+		}
+	}
+
+	// Devices
+	@else if $breakpoint == desktop {
+		@media only #{$media} and (min-width: $breakpoint-large) {
+			@content;
+		}
+	}
+	@else if $breakpoint == tablets {
+		@media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large - 1) {
+			@content;
+		}
+	}
+	@else if $breakpoint == phones {
+		@media only #{$media} and (#{$min-max}-width: $breakpoint-medium - 1) {
+			@content;
+		}
+	}
+	@else if $breakpoint == small-phones {
+		@media only #{$media} and (#{$min-max}-width: $breakpoint-small) {
+			@content;
+		}
+	}
+
+	// Default to custom query
+	@else {
+		@include respond($breakpoint, $media);
+	}
+}
+
+/**
+ * Hide content based on breakpoint device or size
+ */
+@mixin hidden($breakpoint) {
+	@include breakpoint($breakpoint) {
+		display: none !important;
+	}
+}
+
+
+/**
+ * Show content based on breakpoint device or size
+ */
+@mixin visible($breakpoint) {
+	@include breakpoint($breakpoint) {
+		display: inherit !important;
+	}
+}

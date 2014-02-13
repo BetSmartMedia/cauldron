@@ -1,0 +1,124 @@
+$list-font-size: inherit !default;
+$list-colour: black !default;
+$list-content-bg: white !default;
+$list-content-tab: 20px !default;
+$list-icon-colour: #ccc !default;
+$list-padding: 10px 10px 10px 0px !default;
+$list-row-border: 1px solid #ddd !default;
+
+
+//font: style variant weight size/line-height family;
+$list-heading-bg: none !default;
+$list-heading-border: $list-row-border !default;
+$list-heading-colour: #666 !default;
+$list-heading-font: 80%/1.4 default, 'Helvetica Neue', sans-serif !default;
+$list-heading-padding: 8px 20px !default;
+$list-heading-uppercase: true !default;
+
+
+
+//------------------------------------------------------------------------------
+// Default styling
+//------------------------------------------------------------------------------
+ul, ol {
+	list-style-position: outside;
+	margin: 0 0 0 2em;
+	padding: 0;
+
+	li {
+		margin-bottom: .75em;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+// treat a list item as a button
+.li-btn {
+	a {
+		display: block;
+	}
+}
+
+//------------------------------------------------------------------------------
+// iOS styled list (top-level headings span across, child content tabs in.
+// iOS list should be structured like so:
+// <ul class="ios-list">
+// 	<li>
+// 		<h2 class="ios-list-heading">Heading Text<h2> <!-- <h2> can be <ul> -->
+// 		<ul class="ios-list-content">
+// 			<li>...</li>
+// 		</ul>
+// 	</li>
+// </ul>
+//------------------------------------------------------------------------------
+.ios-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ios-list-heading {
+	margin: 0;
+
+	padding: $list-heading-padding;
+	background: $list-heading-bg;
+	border-bottom: $list-heading-border;
+	font: $list-heading-font;
+	color: $list-heading-colour;
+
+	@if $list-heading-uppercase == true {
+		text-transform: uppercase;
+	}
+
+	li {
+		padding: $list-padding;
+		@include box-sizing(border-box);
+	}
+}
+
+.ios-list-content {
+	list-style: none;
+	margin: 0;
+
+	color: $list-colour;
+	padding-left: $list-content-tab;
+	background: $list-content-bg;
+	border-bottom: $list-heading-border;
+
+	li {
+		margin: 0;
+		padding: $list-padding;
+		border-bottom: $list-row-border;
+		@include box-sizing(border-box);
+
+		[class^="icon"] {
+			color: $list-icon-colour;
+		}
+
+
+		&.li-btn {
+			padding: 0;
+			a {
+				text-decoration: none;
+				color: $list-colour;
+				padding: $list-padding;
+			}
+
+			&:hover, &:active {
+				margin-top: -1px;
+				border-top: $list-row-border;
+				margin-left: $list-content-tab * -1;
+				background: rgba(darken($list-content-bg, 10%), .35);
+
+				a {
+					padding-left: $list-content-tab;
+				}
+			}
+
+			&:active {
+				@include box-shadow(inset 0 1px .75em rgba(black, .15));
+			}
+		}
+	}
+}

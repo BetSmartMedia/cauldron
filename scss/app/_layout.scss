@@ -1,0 +1,44 @@
+$gutter: 20px !default;
+
+.page-wrap {
+	width: 100%;
+	//min-height: 100%;
+}
+
+// 1140px wide
+.large-page {
+	width: $large-width;
+	max-width: 100%;
+	margin: 0 auto;
+	@include box-sizing(border-box);
+
+	@include breakpoint(tablets) {
+		padding: ($gutter/2);
+	}
+
+	@include breakpoint(phones) {
+		padding: 10px !important;
+	}
+}
+
+// 100% wide (of parent)
+.full-page {
+	padding: $gutter;
+	@include breakpoint(tablets) {
+		padding: ($gutter/2);
+	}
+}
+
+.page-content {
+	padding: $gutter;
+	@include box-sizing(border-box);
+
+	@include breakpoint(small-phones) {
+		font-size: 90%;
+	}
+}
+
+.narrow {
+	margin: 0 auto;
+	max-width: 600px;
+}
