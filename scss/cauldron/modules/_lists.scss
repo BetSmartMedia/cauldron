@@ -1,11 +1,21 @@
-$list-heading-border: none !default;
-$list-row-border: #eaeaea !default;
-$list-padding: 10px 20px 10px 0px !default;
-$list-heading-padding: 4px 20px !default;
-$list-heading-background: #eaeaea !default;
-
 $list-font-size: inherit !default;
+$list-colour: black !default;
+$list-content-bg: white !default;
 $list-content-tab: 20px !default;
+$list-icon-colour: #ccc !default;
+$list-padding: 10px 10px 10px 0px !default;
+$list-row-border: 1px solid #ddd !default;
+
+
+//font: style variant weight size/line-height family;
+$list-heading-bg: none !default;
+$list-heading-border: $list-row-border !default;
+$list-heading-colour: #666 !default;
+$list-heading-font: 80%/1.4 default, 'Helvetica Neue', sans-serif !default;
+$list-heading-padding: 8px 20px !default;
+$list-heading-uppercase: true !default;
+
+
 
 //------------------------------------------------------------------------------
 // Default styling
@@ -23,9 +33,15 @@ ul, ol {
 	}
 }
 
+// treat a list item as a button
+.li-btn {
+	a {
+		display: block;
+	}
+}
 
 //------------------------------------------------------------------------------
-// iOS styled list (top-level headings span across, child content tabs in)
+// iOS styled list (top-level headings span across, child content tabs in.
 // iOS list should be structured like so:
 // <ul class="ios-list">
 // 	<li>
@@ -43,47 +59,66 @@ ul, ol {
 }
 
 .ios-list-heading {
-	padding: $list-heading-padding;
-	background: $list-heading-background;
 	margin: 0;
+
+	padding: $list-heading-padding;
+	background: $list-heading-bg;
 	border-bottom: $list-heading-border;
+	font: $list-heading-font;
+	color: $list-heading-colour;
+
+	@if $list-heading-uppercase == true {
+		text-transform: uppercase;
+	}
+
 	li {
 		padding: $list-padding;
 		@include box-sizing(border-box);
 	}
 }
-
 
 .ios-list-content {
 	list-style: none;
-	margin-left: $list-content-tab;
+	margin: 0;
+
+	color: $list-colour;
+	padding-left: $list-content-tab;
+	background: $list-content-bg;
+	border-bottom: $list-heading-border;
+
 	li {
 		margin: 0;
 		padding: $list-padding;
-		//padding-left: 0;
-		border-bottom: 1px solid $list-row-border;
+		border-bottom: $list-row-border;
 		@include box-sizing(border-box);
 
-		&:first-child {
+		[class^="icon"] {
+			color: $list-icon-colour;
+		}
 
+
+		&.li-btn {
+			padding: 0;
+			a {
+				text-decoration: none;
+				color: $list-colour;
+				padding: $list-padding;
+			}
+
+			&:hover, &:active {
+				margin-top: -1px;
+				border-top: $list-row-border;
+				margin-left: $list-content-tab * -1;
+				background: rgba(darken($list-content-bg, 10%), .35);
+
+				a {
+					padding-left: $list-content-tab;
+				}
+			}
+
+			&:active {
+				@include box-shadow(inset 0 1px .75em rgba(black, .15));
+			}
 		}
 	}
-}
-
-//------------------------------------------------------------------------------
-// Ordered list
-//------------------------------------------------------------------------------
-ol {
-
-}
-
-//------------------------------------------------------------------------------
-// Unordered list
-//------------------------------------------------------------------------------
-ul {
-
-	// modifiers (@todo)
-	&.cirlce { }
-	&.disc   { }
-	&.bullet { }
 }
