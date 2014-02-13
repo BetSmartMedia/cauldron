@@ -36,17 +36,13 @@ $btn-tertiary-colour: #333 !default;
 	&.pill { @include border-radius(50em); }
 	&.disabled { @include opacity(.5); cursor: default; }
 	&.full-width, &.block { display: block; }
-
-	&:first-child {
-		margin-left: 0;
-	}
 }
 
 .btn-primary {
 	@extend .btn;
 	background: $btn-primary-bg;
 	color: $btn-primary-colour;
-	margin-left: 0;
+	margin-left: 0; // @todo: figure out better way to do this
 
 	&:hover, &:active {
 		background-color: darken($btn-primary-bg, 20%);

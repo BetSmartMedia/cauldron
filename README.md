@@ -16,7 +16,7 @@ Cauldron strives to be assumption-free and allow you to easily pick and choose t
 **[View examples](http://betsmartmedia.github.io/cauldron/)**
 
 
-## Why another goddamn framework?
+## Why another framework?
 Cauldron was created out of burning frustration. I started this project because frankly I haven't found "the perfect framework" which is always my goto. My frustrations lie in the inability to extract pieces from other frameworks without using the WHOLE FRAMEWORK. There are some great frameworks out there, but the majority exceed 200kb and make your app look like their framework (without some heavy overriding).
 
 I wanted stylish & sexy modules which were light-weight. Modules which I could reuse individually in other projects (without using the whole framework). I wanted bare-bones styles that I could morph into any design easily. I needed  libraries from around the web for every project and it was always a repeat process to go and redownload them. I didn't want a bunch of extra fluff that I rarely used. I wanted only common things that I found myself reusing across various projects.
