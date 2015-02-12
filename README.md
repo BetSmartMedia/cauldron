@@ -55,8 +55,4 @@ I've coded Cauldron with a few conventions in mind that I recommend you stick wi
 * **[fastclick](https://github.com/ftlabs/fastclick/)** is a javascript library that removes that pesky 300ms default delay in mobile devices.
 
 #### Misc
-* **[fontello](http://www.fontello.com)** fontello is a great tool to generate an icon font from only the icons you choose. They let you choose from the top 10+ icon fonts around the web.
-
-
-
-
+* **[fontello](http://www.fontello.com)** is a great tool to generate an icon font from only the icons you choose. They let you choose from the top 10+ icon fonts around the web.

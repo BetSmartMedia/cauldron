@@ -1,23 +1,19 @@
-// Breakpoint sizes
-$breakpoint-small:  480px !default;
-$breakpoint-medium: 768px !default;
-$breakpoint-large:  1024px !default;
-$breakpoint-xlarge: 1280px !default;
-
-// Set true if buildling from mobile up
-$mobile-first: false !default;
-
-// Default desktop first apps
-$min-max: 'max';
-
-// Mobile first media queries
-@if $mobile-first == true {
-	$min-max: 'min';
-}
+//------------------------------------------------------------------------------
+// Responsive mixins
+//------------------------------------------------------------------------------
 
 /**
- * Custom media query function
- * @param $breakpoint - is a string
+ * Set breakpoint widths. These values can be overridden in
+ * a master _config.scss file
+ */
+$breakpoint-small-phones:   320px !default;
+$breakpoint-phones:         480px !default;
+$breakpoint-tablets:        768px !default;
+$breakpoint-desktops:       1120px !default;
+
+/**
+ * Create a custom breakpoint:
+ *   @include respond('max-height: 500px') { ... }
  */
 @mixin respond($breakpoint, $media: all) {
 	@media only #{$media} and ($breakpoint) {
@@ -25,78 +21,63 @@ $min-max: 'max';
 	}
 }
 
+
 /**
- * Create a breakpoint based on a keyword otherwise
- * default to respond with a custom media query.
+ * Set a breakpoint by name:
+ *   @include breakpoint(phones) { ... }
+ *
+ * Important to note that if you're styling for phone AND small-phones
+ * you need to inlucde this mixin in a large to small heirarchy so
+ * your do not superceed each other:
+ *   @include breakpoint(tablets) { ... }
+ *   @include breakpoint(phones) { ... }
+ *   @include breakpoint(small-phones) { ... }
  */
 @mixin breakpoint($breakpoint, $media: all) {
-
-
-	// Generic terms
-	@if $breakpoint == small {
-		@media only #{$media} and (#{$min-max}-width: $breakpoint-small) {
-			@content;
-		}
-	}
-	@else if $breakpoint == medium {
-		@media only #{$media} and (#{$min-max}-width: $breakpoint-medium - 1) {
-			@content;
-		}
-	}
-	@else if $breakpoint == large {
-		@media only #{$media} and (#{$min-max}-width: $breakpoint-large) {
-			@content;
-		}
-	}
-	@else if $breakpoint == xlarge {
-		@media only #{$media} and (#{$min-max}-width: $breakpoint-xlarge) {
-			@content;
-		}
-	}
-
-	// Devices
-	@else if $breakpoint == desktop {
-		@media only #{$media} and (min-width: $breakpoint-large) {
+	@if $breakpoint == desktops {
+		@media only #{$media} and (min-width: $breakpoint-desktops) {
 			@content;
 		}
 	}
 	@else if $breakpoint == tablets {
-		@media only screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large - 1) {
+		@media only #{$media} //and (min-width: $breakpoint-tablets) // 768
+		                      and (max-width: $breakpoint-desktops - 1) {
 			@content;
 		}
 	}
 	@else if $breakpoint == phones {
-		@media only #{$media} and (#{$min-max}-width: $breakpoint-medium - 1) {
+		@media only #{$media} //and (min-width: $breakpoint-phones)
+		                      and (max-width: $breakpoint-tablets - 1) {
 			@content;
 		}
 	}
 	@else if $breakpoint == small-phones {
-		@media only #{$media} and (#{$min-max}-width: $breakpoint-small) {
+		@media only #{$media} and (max-width: $breakpoint-phones - 1) {
 			@content;
 		}
 	}
-
-	// Default to custom query
-	@else {
-		@include respond($breakpoint, $media);
-	}
 }
 
+//------------------------------------------------------------------------------
+// Content helpers
+//------------------------------------------------------------------------------
+
 /**
- * Hide content based on breakpoint device or size
+ * Hide content based on breakpoint name:
+ *   @include hidden(phones);
  */
-@mixin hidden($breakpoint) {
-	@include breakpoint($breakpoint) {
+@mixin hidden($media) {
+	@include breakpoint($media) {
 		display: none !important;
 	}
 }
 
-
 /**
- * Show content based on breakpoint device or size
+ * Show content for a certain breakpoint:
+ *   @include visible(tablets);
  */
-@mixin visible($breakpoint) {
-	@include breakpoint($breakpoint) {
+@mixin visible($media) {
+	@include breakpoint($media) {
 		display: inherit !important;
 	}
 }

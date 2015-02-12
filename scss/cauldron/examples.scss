@@ -189,12 +189,15 @@ a {
 }
 
 .prettyprint {
+	//background: rgba(black, .9);
 	background: #efefef;
 	border: none;
 	tab-size: 2;
 	-moz-tab-size: 2;
 	-o-tab-size: 2;
 	max-width: 100%;
+	font-size: 80%;
+	padding: 10px;
 	@include box-sizing(border-box);
 
 	&.large {

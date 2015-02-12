@@ -366,13 +366,55 @@ $btn-primary-colour: white;
 				<hr />
 
 				<h3>iOS 7 styled forms</h3>
+				<p>
+					iOS 7 forms use the same markup as iOS 7 lists below. Because
+					of that, the css to control the the style of forms within
+					a list lives in modules/_lists.scss.
+				</p>
+
 				<h4>Example</h4>
 				<div class="example" style="max-width: 600px">
-					Coming soon...
+					<ul class="ios-list">
+						<li>
+							<h3 class="ios-list-heading">Form Heading</h3>
+							<ul class="ios-list-content">
+								<li>
+									<label for="server">Server</label>
+									<input type="text" name="server" id="server" />
+								</li>
+								<li>
+									<label for="port">Port</label>
+									<input type="text" name="port" id="port" />
+								</li>
+								<li>
+									<label for="proxy">Proxy</label>
+									<input type="text" name="proxy" id="proxy" />
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 <h4>Markup</h4>
 <pre class="prettyprint lang-html">
-// I promise!
+&lt;ul class=&quot;ios-list&quot;&gt;
+	&lt;li&gt;
+		&lt;h3 class=&quot;ios-list-heading&quot;&gt;Form Heading&lt;/h3&gt;
+		&lt;ul class=&quot;ios-list-content&quot;&gt;
+			&lt;li&gt;
+				&lt;label for=&quot;server&quot;&gt;Server&lt;/label&gt;
+				&lt;input type=&quot;text&quot; name=&quot;server&quot; id=&quot;server&quot; /&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;label for=&quot;port&quot;&gt;Port&lt;/label&gt;
+				&lt;input type=&quot;text&quot; name=&quot;port&quot; id=&quot;port&quot; /&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;label for=&quot;proxy&quot;&gt;Proxy&lt;/label&gt;
+				&lt;input type=&quot;text&quot; name=&quot;proxy&quot; id=&quot;proxy&quot; /&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
 </pre>
 
 			</section>
@@ -393,10 +435,13 @@ $btn-primary-colour: white;
 							<h3 class="ios-list-heading">List Heading</h3>
 							<ul class="ios-list-content">
 								<li>Standard li</li>
-								<li><a href="#">Boring link</a></li>
-								<li class="li-btn"><a href="#">Block link</a></li>
+								<li><a href="#lists">Boring link</a></li>
+								<li class="li-btn"><a href="#lists">Block link</a></li>
 								<li class="li-btn">
-									<a href="#">Block link with icon<i class="icon-right-open right"></i></a>
+									<a href="#lists">
+										Block link with icon
+										<i class="icon-right-open right"></i>
+									</a>
 								</li>
 							</ul>
 						</li>
@@ -410,10 +455,13 @@ $btn-primary-colour: white;
 		&lt;h3 class=&quot;ios-list-heading&quot;&gt;List Heading&lt;/h3&gt;
 		&lt;ul class=&quot;ios-list-content&quot;&gt;
 			&lt;li&gt;Standard li&lt;/li&gt;
-			&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Boring link&lt;/a&gt;&lt;/li&gt;
-			&lt;li class=&quot;li-btn&quot;&gt;&lt;a href=&quot;#&quot;&gt;Block link&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href=&quot;#lists&quot;&gt;Boring link&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;li-btn&quot;&gt;&lt;a href=&quot;#lists&quot;&gt;Block link&lt;/a&gt;&lt;/li&gt;
 			&lt;li class=&quot;li-btn&quot;&gt;
-				&lt;a href=&quot;#&quot;&gt;Block link with arrow&lt;i class=&quot;icon-right-open right&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#lists&quot;&gt;
+					Block link with icon
+					&lt;i class=&quot;icon-right-open right&quot;&gt;&lt;/i&gt;
+				&lt;/a&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 	&lt;/li&gt;
@@ -429,7 +477,8 @@ $btn-primary-colour: white;
 				</h2>
 				<p>
 					Modifiers are 1 line pieces of code which make a small
-					modification on existing behaviour. See the _modifiers.scss
+					modification on existing behaviour. See the
+					<strong>_modifiers.scss</strong>
 					file for a full list of available modifiers.
 				</p>
 				<h4>Example</h4>
